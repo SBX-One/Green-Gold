@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+body {
+    overflow-x: hidden;
+}
+
+.bg-diagonal-line {
+    background-color: #0000FF;
+    opacity: 1;
+    background: repeating-linear-gradient( -45deg, #F4F4F5, #F4F4F5 50px, #00000000 50px, #00000000 75px );
+}
 
 @theme {
     --color-purple-50: #F1EEFD;
@@ -84,6 +93,7 @@
     --color-pink-700: #871243;
     --color-pink-800: #5A0C2D;
     --color-pink-900: #2D0616;
+    --color-RIGO-secondary: #F4F4F5;
     
     --color-neutral-50: var(--color-gray-50);
     --color-neutral-100: var(--color-gray-100);
@@ -230,6 +240,18 @@
     --color-icon-warning: var(--color-warning-700);
     --color-icon-error: var(--color-error-default);
     --color-icon-succes: var(--color-succes-default);
+
+    --text-md-defult: 16px;
+}
+
+.display {
+    font-family: Figtree, sans-serif;
+    src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: semibold;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1.5px;
 }
 
 .h1-heading {
