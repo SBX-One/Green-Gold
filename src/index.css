@@ -6,6 +6,7 @@ body {
 }
 
 .bg-diagonal-line {
+    z-index: 0;
     background-color: #0000FF;
     opacity: 1;
     background: repeating-linear-gradient( -45deg, #F4F4F5, #F4F4F5 50px, #00000000 50px, #00000000 75px );
