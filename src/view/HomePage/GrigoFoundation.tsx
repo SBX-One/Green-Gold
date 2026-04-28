@@ -36,7 +36,7 @@ export default function GrigoFoundation() {
                 <div className="flex flex-col gap-4 pt-6 pb-16">
                     <RigoButton text="Mulai Sekarang" inv={true} />
                     <RigoButton text="Lihat Demo" inv={false} />
-                </div>
+            </div>
 
                 <div className="flex flex-col gap-5">
                     {GrigoFoundationData.map((item, index) => (

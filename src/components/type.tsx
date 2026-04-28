@@ -21,3 +21,8 @@ export type RigoImageCardProps = {
     image: string,
     customImageClass?: string
 }
+
+export type RigoAccordianProps = {
+    title: string,
+    content: string
+}

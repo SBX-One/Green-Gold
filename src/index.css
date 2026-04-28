@@ -265,12 +265,12 @@ body {
     letter-spacing: -2%;
 }
 
-.h1-heading {
+.h2-heading {
     font-family: Figtree, sans-serif;
     src: url("./assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
     font-style: normal;
     font-weight: semibold;
-    font-size: 24  px;
+    font-size: 24px;
     letter-spacing: -2%;
 }
 
