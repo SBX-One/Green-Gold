@@ -12,19 +12,19 @@ export default function HowWeSolve() {
             title: "Penjemputan Aktif & Instant",
             date: "Kurir kami yang datang jemput ke depan pintu.",
             image: image1,
-            customImageClass: "py-8.25 px-5"
+            customImageClass: "py-8.25 px-5 md:px-16"
         },
         {
             title: "Penjemputan Aktif & Instant",
             date: "Kurir kami yang datang jemput ke depan pintu.",
             image: image2,
-            customImageClass: "py-3 absolute h-49.5 w-135.25 object-cover"
+            customImageClass: "py-3 absolute h-49.5 w-135.25 object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         },
         {
             title: "Penjemputan Aktif & Instant",
             date: "Kurir kami yang datang jemput ke depan pintu.",
             image: image3,
-            customImageClass: "object-cover absolute bottom-6 ml-8.5"
+            customImageClass: "object-cover absolute bottom-6 ml-8.5 md:bottom-50 "
         },
         {
             title: "Penjemputan Aktif & Instant",
@@ -36,7 +36,7 @@ export default function HowWeSolve() {
 
     return (
         <div>
-            <div className="flex flex-col gap-6 pb-16 border-b border-border-default mt-32">
+            <div className="flex flex-col gap-6 pb-6 border-b border-border-default mt-32">
                 <div className="w-fit mx-auto">
                     <LogoPill text="How We Solve" />
                 </div>
@@ -44,7 +44,7 @@ export default function HowWeSolve() {
                     Platform Praktis <br className="md:hidden" /> Mengubah <br /> Sampah Rumah  Menjadi Saldo Belanja
                 </h1>
             </div>
-            <div className="flex flex-col gap-5 ">
+            <div className="flex flex-col gap-5 mt-10">
                 {HWSCardData.map((data, i) => (
                     <RigoImageCard key={i} {...data} />
                 ))}

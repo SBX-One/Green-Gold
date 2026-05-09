@@ -8,7 +8,7 @@ export default function RigoImageCard({ title, date, image, customImageClass }: 
                 <h1 className="md-bold">{title}</h1>
                 <p className="xs-default text-text-placeholder">{date}</p>
             </div>
-            <div className="h-52 rounded-b-2xl border-t-2 border-border-default bg-surface-default relative overflow-hidden">
+            <div className="h-52 md:h-66.25 rounded-b-2xl border-t-2 border-border-default bg-surface-default relative overflow-hidden">
                 <div className="bg-diagonal-line w-full h-full absolute" />
                 <img src={image} alt={title} className={` z-10 relative ${customImageClass || "w-full h-full"}`} />
             </div>

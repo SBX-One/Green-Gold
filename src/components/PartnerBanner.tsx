@@ -12,7 +12,7 @@ export default function PartnerBanner() {
     ]
 
     return (
-        <div className="py-10 border border-border-default flex bg-neutral-white absolute w-150 gap-14.5 left-0 object-cover h-24">
+        <div className="h-36 w-screen left-0 ml-[calc(50%-50vw)] bg-nneutral-white border-y-2 relative z-20 bg-neutral-white border-border-default flex items-center justify-between">
             {PartnerList.map((Partner, i) => (
                 <div>
                     <img src={Partner} alt="partner" key={i} />

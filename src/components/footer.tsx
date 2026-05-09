@@ -60,7 +60,7 @@ export default function Footer() {
     return (
         <div>
             <div className="mb-15">
-                <Seperator height={"50px"} />
+                <Seperator height={"h-12.5 md:h-25"} />
             </div>
 
             <div className="pb-10 border-b-2 flex flex-row justify-between  border-border-default mb-16">

@@ -244,6 +244,8 @@ body {
     --color-icon-succes: var(--color-succes-default);
 
     --text-md-defult: 16px;
+
+    --breakpoint-desktop: 1440px;
 }
 
 @layer utilities {
