@@ -31,7 +31,7 @@ export default function FAQ() {
     ]
 
     return (
-        <div className="mt-32 pb-32 md:px-7.25">
+        <div className="mt-32 pb-32 md:px-7.25 desktop:w-198 mx-auto">
             <LogoPill text="Grigo Foundation" />
             <div className="flex flex-col gap-8 mt-4 pb-16">
                 <h1 id="h1-FAQ" className="h1-heading font-bold text-text-heading">

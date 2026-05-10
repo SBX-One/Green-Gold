@@ -12,7 +12,7 @@ export default function HowWeSolve() {
             title: "Penjemputan Aktif & Instant",
             date: "Kurir kami yang datang jemput ke depan pintu.",
             image: image1,
-            customImageClass: "py-8.25 px-5 md:px-16"
+            customImageClass: "py-8.25 px-5 md:px-16 desktop:mt-5"
         },
         {
             title: "Penjemputan Aktif & Instant",
@@ -24,7 +24,7 @@ export default function HowWeSolve() {
             title: "Penjemputan Aktif & Instant",
             date: "Kurir kami yang datang jemput ke depan pintu.",
             image: image3,
-            customImageClass: "object-cover absolute bottom-6 ml-8.5 md:bottom-50 "
+            customImageClass: "object-cover absolute bottom-6 ml-8.5 md:bottom-50 desktop:bottom-40"
         },
         {
             title: "Penjemputan Aktif & Instant",
@@ -44,7 +44,7 @@ export default function HowWeSolve() {
                     Platform Praktis <br className="md:hidden" /> Mengubah <br /> Sampah Rumah  Menjadi Saldo Belanja
                 </h1>
             </div>
-            <div className="flex flex-col gap-5 mt-10">
+            <div className="flex flex-col gap-5 mt-10 desktop:grid desktop:grid-cols-2">
                 {HWSCardData.map((data, i) => (
                     <RigoImageCard key={i} {...data} />
                 ))}

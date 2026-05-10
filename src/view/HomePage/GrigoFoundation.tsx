@@ -43,7 +43,7 @@ export default function GrigoFoundation() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-5 desktop:flex-row">
                     {GrigoFoundationData.map((item, index) => (
                         <RigoCard key={index} {...item} />
                     ))}

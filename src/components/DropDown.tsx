@@ -1,29 +1,8 @@
 import DropDownLink from "./DropDownLink"
 import { useEffect} from "react"
+import linksList from "./ListData";
 
 export default function DropDown() {
-    const linksList = [
-        {
-            links: "#",
-            title: "Home"
-        },
-        {
-            links: "#",
-            title: "About"
-        },
-        {
-            links: "#",
-            title: "Feature"
-        },
-        {
-            links: "#",
-            title: "Impact"
-        },
-        {
-            links: "#",
-            title: "FAQ"
-        },
-    ]
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';

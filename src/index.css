@@ -242,9 +242,11 @@ body {
     --color-icon-warning: var(--color-warning-700);
     --color-icon-error: var(--color-error-default);
     --color-icon-succes: var(--color-succes-default);
+    --color-foreground: #09090B;
 
     --text-md-defult: 16px;
 
+    --breakpoint-md: 748px;
     --breakpoint-desktop: 1440px;
 }
 

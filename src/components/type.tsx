@@ -3,7 +3,8 @@ import type { CSSProperties } from 'react';
 export type RIGOBTNPROPS = {
     inv : boolean,
     text : string,
-    chevronColor?: string
+    chevronColor?: string,
+    icon?: boolean
 }  
 
 export type WWSCardProps = {
