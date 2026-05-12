@@ -16,15 +16,15 @@ export default function ScanMeth() {
                 <div className="py-13.25 w-full relative bg-surface-default border-2 border-border-default flex justify-center items-center gap-2 rounded-2xl mt-5 flex-col">
                     <img src={barcodeIcon} alt="barcode" className="w-12" />
                     <p className="label-default text-text-placasasqgeholder">Tambah Foto</p>
-                    <div className="w-35 absolute right-0 bottom-6">
-                        <RigoButton inv={true} text="Lanjut" />
-                    </div>
                 </div>
             ): (
                 <div>
-                    <h1>numpad</h1>
+                    <input type="text" className="bg-neutral-white w-full p-4 md-semibold rounded-2xl border-2 border-border-default focus:outline-0 text-text-body mt-5" placeholder="Input kode di sini" />
                 </div>
             )}
+                <div className="w-35 absolute right-5 bottom-11">
+                    <RigoButton inv={true} text="Lanjut" />
+                </div>
         </div>
     )
 }

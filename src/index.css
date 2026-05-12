@@ -1,9 +1,26 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+html,
 body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     background-color: var(--color-neutral-white);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
 }
 
 .bg-diagonal-line {

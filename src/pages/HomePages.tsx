@@ -10,7 +10,7 @@ import Footer from "../components/layout/footer"
 
 export default function HomePages() {
     return (
-        <div className="bg-neutral-white px-5 md:px-15 desktop:px-30">
+        <div className="bg-neutral-white px-5 md:px-15 desktop:px-30 flex flex-col">
             <Navbar />
             <PageHeading />
             <BannerPartner />

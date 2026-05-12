@@ -3,13 +3,16 @@ import BalanceViewer from "../../components/common/BalanceViewer"
 import SimpleButton from "../../components/ui/button/SimpleButton"
 import arrowUpDown from "../../assets/svg/arrow-up-down.svg"
 import shoppingCart from '../../assets/svg/shopping-cart-green.svg'
+import { useNavigate } from "react-router-dom"
 
 export default function Balance() {
+    const navigate = useNavigate();
+
     const SimpleButtonList = [
         {
             text : "Transfer",
             icon : arrowUpDown,
-            onClick : () => console.log("Transfer clicked")
+            onClick : () => navigate("/ScanYourTrash")
         },
         {
             text : "Shop",
