@@ -1,4 +1,4 @@
-import type { ReactNode, CSSProperties } from "react"
+import type { ReactNode, CSSProperties, Dispatch, SetStateAction } from "react"
 
 export type RIGOBTNPROPS = {
     inv : boolean,
@@ -47,7 +47,7 @@ export type CustomClassProps = {
 }
 
 export type NavbarProps = {
-    mode: string;
+    mode?: string;
 }
 
 export type SimpleButtonProps = {
@@ -74,4 +74,9 @@ export type SimpleCardProps = {
     icon?: ReactNode;
     numSampah: number;
     setNumSampah: (updater: (prev: number) => number) => void;
+}
+
+export type TabsProps = {
+    setCurrentMode: Dispatch<SetStateAction<boolean>>;
+    currentMode: boolean;
 }
