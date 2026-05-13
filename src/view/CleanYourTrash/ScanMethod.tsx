@@ -2,9 +2,23 @@ import { useState } from "react"
 import Tabs from "../../components/ui/button/Tabs";
 import barcodeIcon from "../../assets/svg/fi_Barcode.svg"
 import RigoButton from "../../components/ui/button/RigoButton";
+import { useNavigate } from "react-router-dom";
+import { useTrash } from "../../context/TrashContext";
 
 export default function ScanMeth() {
     const [currentMode, setCurrentMode] = useState<boolean>(true);
+    const navigate = useNavigate();
+    const { totalHarga, setCompletedHarga } = useTrash();
+
+    const handleLanjut = () => {
+        setCompletedHarga(totalHarga);
+        if (totalHarga > 0) {
+            navigate('/TrashCheckout');
+        } else {
+            alert("harga tidak bisa 0")
+        }
+    }
+    console.log(totalHarga);
 
     return (
         <div className="text-text-body">
@@ -23,7 +37,7 @@ export default function ScanMeth() {
                 </div>
             )}
                 <div className="w-35 absolute right-5 bottom-11">
-                    <RigoButton inv={true} text="Lanjut" />
+                    <RigoButton inv={true} text="Lanjut" onClick={handleLanjut} />
                 </div>
         </div>
     )

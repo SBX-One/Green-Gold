@@ -5,6 +5,7 @@ export type RIGOBTNPROPS = {
     text : string,
     chevronColor?: string,
     icon?: boolean
+    onClick?: () => void;
 }  
 
 export type WWSCardProps = {
@@ -82,6 +83,7 @@ export type TabsProps = {
 }
 
 export type MenuProps = {
-    TotalHarga: number;
-    setTotalHarga: Dispatch<SetStateAction<number>>
+    TotalHarga?: number;
+    setTotalHarga?: Dispatch<SetStateAction<number>>
+    back: string;
 }
