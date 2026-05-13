@@ -2,10 +2,12 @@ import SimpleCard from "../../components/common/SimpleCard"
 import RigoButton from "../../components/ui/button/RigoButton";
 import { useTrash } from "../../context/TrashContext"
 import { useHandleSetNum } from "../../type/handleSetNumt";
+import { useNavigate } from "react-router-dom";
 
 export default function IsiSampah() {
-    const { numSampah } = useTrash();
+    const { numSampah, setIsOrder } = useTrash();
     const handleSetNum = useHandleSetNum();
+    const navigate = useNavigate();
 
     const SampahUmumList = [
         {
@@ -24,6 +26,12 @@ export default function IsiSampah() {
             harga: 1000,
         }
     ]
+    function handleCariJemput() {
+        setIsOrder(true);
+        navigate('/Home');
+
+        console.log("back to home")
+    }
 
     // Hitung total kg
     const totalKg = numSampah.reduce((acc, val) => acc + val, 0);
@@ -44,7 +52,7 @@ export default function IsiSampah() {
                 ))}
             </div>
             <div className="sticky w-fit ml-auto bottom-5">
-                <RigoButton text="Cari Penjemput" inv={true} />
+                <RigoButton text="Cari Penjemput" inv={true} onClick={() => handleCariJemput()} />
             </div>
         </div>
     )

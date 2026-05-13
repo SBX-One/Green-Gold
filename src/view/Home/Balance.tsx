@@ -4,11 +4,12 @@ import SimpleButton from "../../components/ui/button/SimpleButton"
 import arrowUpDown from "../../assets/svg/arrow-up-down.svg"
 import shoppingCart from '../../assets/svg/shopping-cart-green.svg'
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
+import { useTrash } from "../../context/TrashContext"
 
 export default function Balance() {
+    const { isOrder } = useTrash();
+
     const navigate = useNavigate();
-    const [penjemput, setPenjemput] = useState(false);
     const SimpleButtonList = [
         {
             text : "Transfer",
@@ -29,7 +30,7 @@ export default function Balance() {
                 <BalanceViewer />
             </div>
             <div>
-                {penjemput && (
+                {isOrder && (
                     <div className="text-center py-5 border-2 relative border-border-default rounded-2xl object-cover overflow-hidden mt-2">
                         <p className="xs-default text-text-placeholder">DK 2008 P</p>
                         <h2 className="md-semibold text-text-label">~ 12 Minutes</h2>
