@@ -93,13 +93,16 @@ export type MenuProps = {
 export type SimpleIconProps = {
     icon: string;
     iconWidth: number;
+    border?: boolean;
 }
 
 export type BarProps = {
     title: string;
-    desc: string;
+    desc: string | number;
     iconR?: string;
     iconL?: string;
+    iconLBorder?: boolean;
+    iconRBorder?: boolean;
 }
 
 export type DropDownBarProps = {
