@@ -6,6 +6,7 @@ import TrashCheckout from "./pages/TrashCheckout";
 import { TrashProvider } from "./context/TrashContext";
 import Receipt from "./pages/Receipt";
 import ItemCheckout from "./pages/ItemCheckout";
+import Keranjang from "./pages/Keranjang";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Receipt" element={<Receipt />} />
           <Route path="/ItemCheckout" element={<ItemCheckout />} />
           <Route path="/Checkout+Sampah/:productName/:productId" element={<ItemCheckout />} />
+          <Route path="/Keranjang" element={<Keranjang />} />
         </Routes>
       </BrowserRouter>
     </TrashProvider>
