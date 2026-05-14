@@ -66,6 +66,8 @@ export type ProductCardProps = {
 
 export type SimplePillProps = {
     text: string;
+    isSelected?: boolean;
+    onClick?: () => void;
 }
 
 export type SimpleCardProps = {

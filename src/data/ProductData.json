@@ -1,14 +1,14 @@
 [
-    {"id": 1, "title": "Le Minerale", "harga": 15000, "img": "imageP1.webp"},
-    {"id": 2, "title": "Le Minerale", "harga": 15000, "img": "imageP2.webp"},
-    {"id": 3, "title": "Le Minerale", "harga": 15000, "img": "imageP3.webp"},
-    {"id": 4, "title": "Le Minerale", "harga": 15000, "img": "imageP4.webp"},
-    {"id": 5, "title": "Le Minerale", "harga": 15000, "img": "imageP5.webp"},
-    {"id": 6, "title": "Le Minerale", "harga": 15000, "img": "imageP6.webp"},
-    {"id": 7, "title": "Le Minerale", "harga": 15000, "img": "imageP7.webp"},
-    {"id": 8, "title": "Le Minerale", "harga": 15000, "img": "imageP8.webp"},
-    {"id": 9, "title": "Le Minerale", "harga": 15000, "img": "imageP9.webp"},
-    {"id": 10, "title": "Le Minerale", "harga": 15000, "img": "imageP10.webp"},
-    {"id": 11, "title": "Le Minerale", "harga": 15000, "img": "imageP11.webp"},
-    {"id": 12, "title": "Le Minerale", "harga": 15000, "img": "imageP12.webp"}
+    {"id": 1, "title": "Le Minerale", "harga": 15000, "img": "imageP1.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 2, "title": "Le Minerale", "harga": 15000, "img": "imageP2.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 3, "title": "Le Minerale", "harga": 15000, "img": "imageP3.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 4, "title": "Le Minerale", "harga": 15000, "img": "imageP4.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 5, "title": "Le Minerale", "harga": 15000, "img": "imageP5.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 6, "title": "Le Minerale", "harga": 15000, "img": "imageP6.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 7, "title": "Le Minerale", "harga": 15000, "img": "imageP7.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 8, "title": "Le Minerale", "harga": 15000, "img": "imageP8.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 9, "title": "Le Minerale", "harga": 15000, "img": "imageP9.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 10, "title": "Le Minerale", "harga": 15000, "img": "imageP10.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 11, "title": "Le Minerale", "harga": 15000, "img": "imageP11.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]},
+    {"id": 12, "title": "Le Minerale", "harga": 15000, "img": "imageP12.webp", "desc": "Le Minerale Air Mineral Galon 15 L merupakan produk air mineral yang dibuat dari air murni yang bersumber dari mata air pegunungan di Indonesia ", "variant" : ["10L", "5L", "1,5L", "600ml", "330ml"]}
 ]
