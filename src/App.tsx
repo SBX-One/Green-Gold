@@ -5,6 +5,7 @@ import CleanYourTrash from "./pages/CleanYourTrash";
 import TrashCheckout from "./pages/TrashCheckout";
 import { TrashProvider } from "./context/TrashContext";
 import Receipt from "./pages/Receipt";
+import ItemCheckout from "./pages/ItemCheckout";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route path="/ScanYourTrash" element={<CleanYourTrash />} />
           <Route path="/TrashCheckout" element={<TrashCheckout />} />
           <Route path="/Receipt" element={<Receipt />} />
+          <Route path="/ItemCheckout" element={<ItemCheckout />} />
+          <Route path="/Checkout+Sampah/:productName/:productId" element={<ItemCheckout />} />
         </Routes>
       </BrowserRouter>
     </TrashProvider>
