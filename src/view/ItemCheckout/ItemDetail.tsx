@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTrash } from "../../context/TrashContext";
 import { getProductionImageMap } from "../../type/useProductImage";
@@ -8,6 +8,7 @@ import cart from "../../assets/svg/shopping-cart-green.svg"
 import RigoButton from "../../components/ui/button/RigoButton";
 import plus from "../../assets/svg/plus.svg";
 import minus from "../../assets/svg/minus.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function ItemDetail() {
     const { productName } = useParams<{ productName: string; productId: string }>();
@@ -15,6 +16,7 @@ export default function ItemDetail() {
     const imageMap = getProductionImageMap();
     const [selectedVariant, setSelectedVariant] = useState<string | null>(null);
     const [isButtonClick, setIsButtonClick] = useState<boolean>(false);
+    const navigate = useNavigate();
 
     const productImage = selectedProduct ? imageMap[selectedProduct.img] ?? '/placeholder.webp' : '/placeholder.webp';
     console.log(itemNum)
@@ -61,7 +63,9 @@ export default function ItemDetail() {
                         </div>
                         <p className="text-text-body mb-auto xs-default">{selectedProduct?.desc}</p>
                         <div className="flex flex-row gap-3 w-full mt-18">
-                            <SimpleIcon icon={cart} iconWidth={16} />
+                            <div className="w-fit" onClick={() => navigate('/Keranjang')}>
+                                <SimpleIcon icon={cart} iconWidth={16} />
+                            </div>
                             <div className="flex flex-1 items-center">
                                 {isButtonClick ? (
                                     <div className="flex flex-1 flex-row-reverse justify-between items-center">
