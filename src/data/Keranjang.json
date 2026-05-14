@@ -1,16 +1,16 @@
 [
     {
-        "id": 1,
+        "id": 7,
         "namaBarang": "Le Minerale",
-        "variant": "10L",
+        "variant": "1,5L",
         "harga": 15000,
-        "jumlah": 6
+        "jumlah": 2
     },
     {
-        "id": 2,
+        "id": 3,
         "namaBarang": "Le Minerale",
         "variant": "10L",
         "harga": 15000,
-        "jumlah": 5
+        "jumlah": 3
     }
 ]

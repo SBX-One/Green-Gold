@@ -1,5 +1,5 @@
 import express from 'express';
-import fs from 'fs'
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
@@ -10,7 +10,6 @@ app.use(cors());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 const KERANJANG_PATH = path.join(__dirname, '../Keranjang.json');
 
 // Fungsi baca Keranjang.json
@@ -28,91 +27,37 @@ function writeKeranjang(data) {
     fs.writeFileSync(KERANJANG_PATH, JSON.stringify(data, null, 4));
 }
 
-// POST: Tambah item ke keranjang
-app.post('/api/keranjang', (req, res) => {
-    try {
-
-        console.log(req.body);
-        // Accept both 'nama' dan 'namaBarang' field
-        const { id, nama, namaBarang, harga, jumlah, variant } = req.body;
-        const namaItem = nama || namaBarang;
-
-        // Validasi input
-        if (!id || !namaItem || !harga || !variant) {
-            return res.status(400).json({ error: 'Data tidak lengkap' });
-        }
-
-        // Baca keranjang yang sudah ada
-        let keranjang = readKeranjang();
-
-        // Cek apakah item sudah ada di keranjang
-        const existingItem = keranjang.find(item => item.id === id && item.variant === variant);
-
-        if (existingItem) {
-            // Jika sudah ada, update jumlahnya
-            existingItem.jumlah = (existingItem.jumlah || 1) + (jumlah || 1);
-        } else {
-            // Jika belum ada, tambah item baru
-            keranjang.push({
-                id: id,
-                namaBarang: namaItem,
-                variant: variant,
-                harga: harga,
-                jumlah: jumlah || 1
-            });
-        }
-
-        // Simpan ke file
-        writeKeranjang(keranjang);
-
-        res.json({ 
-            success: true, 
-            message: 'Item berhasil ditambahkan ke keranjang',
-            keranjang: keranjang
-        });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
 // GET: Ambil semua item keranjang
 app.get('/api/keranjang', (req, res) => {
-    try {
-        const keranjang = readKeranjang();
-        res.json(keranjang);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
+    const keranjang = readKeranjang(); // ✅ pakai KERANJANG_PATH via readKeranjang()
+    res.json(keranjang);
 });
 
-// DELETE: Hapus item dari keranjang
-app.delete('/api/keranjang/:id/:variant', (req, res) => {
-    try {
-        const { id, variant } = req.params;
-        let keranjang = readKeranjang();
+// POST: Tambah atau update item
+app.post('/api/keranjang', (req, res) => {
+    const { id, namaBarang, variant, harga, jumlah } = req.body;
+    const keranjang = readKeranjang(); // ✅ pakai KERANJANG_PATH via readKeranjang()
 
-        keranjang = keranjang.filter(item => !(String(item.id) === id && item.variant === variant));
-        writeKeranjang(keranjang);
+    const existingIndex = keranjang.findIndex(item => item.id === id);
 
-        res.json({ 
-            success: true, 
-            message: 'Item berhasil dihapus',
-            keranjang: keranjang
-        });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
+    if (existingIndex !== -1) {
+        keranjang[existingIndex].jumlah = jumlah; // update
+    } else {
+        keranjang.push({ id, namaBarang, variant, harga, jumlah }); // insert baru
     }
+
+    writeKeranjang(keranjang); // ✅ pakai KERANJANG_PATH via writeKeranjang()
+    res.json({ success: true, data: keranjang });
 });
 
-// PUT: Update jumlah item
+// PUT: Update jumlah item berdasarkan id & variant
 app.put('/api/keranjang/:id/:variant', (req, res) => {
     try {
         const { id, variant } = req.params;
         const { jumlah } = req.body;
-        
         let keranjang = readKeranjang();
-        const item = keranjang.find(item => String(item.id) === id && item.variant === variant);
 
+        const item = keranjang.find(item => String(item.id) === id && item.variant === variant);
         if (!item) {
             return res.status(404).json({ error: 'Item tidak ditemukan' });
         }
@@ -124,38 +69,28 @@ app.put('/api/keranjang/:id/:variant', (req, res) => {
         }
 
         writeKeranjang(keranjang);
-
-        res.json({ 
-            success: true, 
-            message: 'Item berhasil diupdate',
-            keranjang: keranjang
-        });
+        res.json({ success: true, message: 'Item berhasil diupdate', keranjang });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
 
-// Tambah item baru
-app.post('/api/keranjang', (req, res) => {
-    const { id, namaBarang, variant, harga, jumlah } = req.body;
-    // logika simpan ke json...
-    res.json({ success: true })
-})
+// DELETE: Hapus item berdasarkan id & variant
+app.delete('/api/keranjang/:id/:variant', (req, res) => {
+    try {
+        const { id, variant } = req.params;
+        let keranjang = readKeranjang();
 
-// Update jumlah
-app.patch('/api/keranjang/:id', (req, res) => {
-    const { id } = req.params;
-    const { jumlah } = req.body;
-    // logika update jumlah berdasarkan id...
-    res.json({ success: true })
-})
+        keranjang = keranjang.filter(
+            item => !(String(item.id) === id && item.variant === variant)
+        );
 
-// Hapus item
-app.delete('/api/keranjang/:id', (req, res) => {
-    const { id } = req.params;
-    // logika hapus berdasarkan id...
-    res.json({ success: true })
-})
+        writeKeranjang(keranjang);
+        res.json({ success: true, message: 'Item berhasil dihapus', keranjang });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 
 const PORT = 3001;
 app.listen(PORT, () => {

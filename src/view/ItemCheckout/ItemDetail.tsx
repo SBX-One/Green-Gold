@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTrash } from "../../context/TrashContext";
 import { getProductionImageMap } from "../../type/useProductImage";
 import SimplePill from "../../components/common/SimplePill";
@@ -18,6 +18,15 @@ export default function ItemDetail() {
     const [isButtonClick, setIsButtonClick] = useState<boolean>(false);
     const navigate = useNavigate();
 
+    const itemNumRef = useRef(itemNum);
+    const isButtonClickRef = useRef(isButtonClick);
+    const selectedVariantRef = useRef(selectedVariant);
+    const hasChangedRef = useRef(false);
+
+    useEffect(() => { itemNumRef.current = itemNum }, [itemNum]);
+    useEffect(() => { isButtonClickRef.current = isButtonClick }, [isButtonClick]);
+    useEffect(() => { selectedVariantRef.current = selectedVariant }, [selectedVariant]);
+
     const productImage = selectedProduct
         ? imageMap[selectedProduct.img] ?? '/placeholder.webp'
         : '/placeholder.webp';
@@ -28,82 +37,61 @@ export default function ItemDetail() {
         }
     }, [selectedProduct]);
 
-    function handleAdd() {
-    const newNum = itemNum + 1;
-    setItemNum((prev: number) => prev + 1);
+    useEffect(() => {
+        if (!selectedProduct) return;
 
-    if (!isButtonClick) {
-        setIsButtonClick(true);
-        addToCart(newNum);      // pertama kali → POST
-    } else {
-        updateCart(newNum);     // sudah ada → PUT/PATCH
-    }
-}
-
-function handleSubtract() {
-    const newNum = itemNum - 1;
-    setItemNum((prev: number) => prev - 1);
-
-    if (newNum === 0) {
-        setIsButtonClick(false);
-        deleteCart();           // hapus dari keranjang
-    } else {
-        updateCart(newNum);     // update jumlah
-    }
-}
-
-// Pertama kali tambah → POST
-async function addToCart(jumlah: number) {
-    if (!selectedProduct) return;
-    try {
-        const response = await fetch("http://localhost:3001/api/keranjang", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                "id": selectedProduct.id,
-                "namaBarang": selectedProduct.title,
-                "variant": selectedVariant,
-                "harga": selectedProduct.harga,
-                "jumlah": jumlah   // ✅ pakai argumen, bukan state
+        fetch("http://localhost:3001/api/keranjang")
+            .then(res => res.json())
+            .then((data: { id: number, jumlah: number }[]) => {
+                const existing = data.find(item => item.id === selectedProduct.id);
+                if (existing) {
+                    setItemNum(existing.jumlah);
+                    setIsButtonClick(true);
+                } else {
+                    setItemNum(0);
+                    setIsButtonClick(false);
+                }
+                hasChangedRef.current = false;
             })
-        });
-        if (!response.ok) throw new Error("Gagal menambah");
-        const data = await response.json();
-        console.log("Berhasil ditambah:", data);
-    } catch (error) {
-        console.error("Error:", error);
-    }
-}
+            .catch(err => console.error("Gagal load keranjang:", err));
+    }, [selectedProduct]);
 
-// Update jumlah → PATCH
-async function updateCart(jumlah: number) {
-    if (!selectedProduct) return;
-    try {
-        const response = await fetch(`http://localhost:3001/api/keranjang/${selectedProduct.id}`, {
-            method: "PATCH",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ "jumlah": jumlah })  // ✅ kirim jumlah terbaru
-        });
-        if (!response.ok) throw new Error("Gagal update");
-        const data = await response.json();
-        console.log("Berhasil diupdate:", data);
-    } catch (error) {
-        console.error("Error:", error);
-    }
-}
+    useEffect(() => {
+        return () => {
+            const jumlah = itemNumRef.current;
+            const sudahDitambah = isButtonClickRef.current;
+            const variant = selectedVariantRef.current;
+            const adaPerubahan = hasChangedRef.current;
 
-// Jumlah 0 → hapus dari keranjang
-async function deleteCart() {
-    if (!selectedProduct) return;
-    try {
-        await fetch(`http://localhost:3001/api/keranjang/${selectedProduct.id}`, {
-            method: "DELETE"
-        });
-        console.log("Item dihapus dari keranjang");
-    } catch (error) {
-        console.error("Error:", error);
+            if (!sudahDitambah || !selectedProduct || jumlah <= 0 || !adaPerubahan) return;
+
+            fetch("http://localhost:3001/api/keranjang", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    "id": selectedProduct.id,
+                    "namaBarang": selectedProduct.title,
+                    "variant": variant,
+                    "harga": selectedProduct.harga,
+                    "jumlah": jumlah
+                })
+            }).catch(err => console.error("Gagal menyimpan keranjang:", err));
+        };
+    }, [selectedProduct]);
+
+    function handleAdd() {
+        setIsButtonClick(true);
+        setItemNum((prev: number) => prev + 1);
+        hasChangedRef.current = true; 
     }
-}
+
+    function handleSubtract() {
+        setItemNum((prev: number) => prev - 1);
+        hasChangedRef.current = true;
+        if (itemNum === 1) {
+            setIsButtonClick(false);
+        }
+    }
 
     return (
         <div className="flex flex-col">
@@ -120,7 +108,7 @@ async function deleteCart() {
                                     text={item}
                                     isSelected={selectedVariant === item}
                                     onClick={() => {
-                                        setSelectedVariant(item); // ✅ update local state
+                                        setSelectedVariant(item);
                                         setItemVariant(item);
                                     }}
                                 />
