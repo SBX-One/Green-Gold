@@ -15,6 +15,21 @@ export default function Navbar({ mode }: NavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
 
+    const HomeModeList = [
+        {
+            title: "Home",
+            links: "/home"
+        },
+        {
+            title: "Kamus",
+            links: "#"
+        },
+        {
+            title: "Shop",
+            links: "/"
+        }
+    ]
+
     return (
         <div className="sticky top-0 z-200">
             <div className={`bg-neutral-white left-0 w-screen ml-[calc(50%-50vw)] py-10 desktop:py-7.5 md:py-14 px-5 md:px-15 xl:px-30 flex justify-between border-b-2 border-[#DEDEDE] items-center ${mode === 'home' ? 'max-h-21' : ''}`}>
@@ -35,7 +50,22 @@ export default function Navbar({ mode }: NavbarProps) {
                 </div>
             </div>
             <div>
-                {isMenuOpen && (
+                {isMenuOpen && mode === 'home' && (
+                    <div>
+                        <div className="border-2 absolute bg-neutral-white rounded-3xl right-0 border-border-default w-2/3 p-5 flex flex-col gap-3">
+                            {HomeModeList.map((item, i) => (
+                                <div key={i}>
+                                    <div className="xs-leading-normal text-text-label hover:text-text-action px-5 py-3.5 transition-all duration-100 hover:border-2 border-border-default rounded-2xl">
+                                        <h1 className="">{item.title}</h1>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+            </div>
+            <div>
+                {isMenuOpen && mode !== 'home' && (
                     <DropDown />
                 )}
             </div>

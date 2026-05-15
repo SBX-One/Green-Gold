@@ -72,12 +72,13 @@ export type SimplePillProps = {
 }
 
 export type SimpleCardProps = {
-    title: string;
-    desc: string;
+    mode: string;
+    title?: string;
+    desc?: string;
     button?: boolean;
     icon?: ReactNode;
-    numSampah: number;
-    setNumSampah: (updater: (prev: number) => number) => void;
+    numSampah?: number;
+    setNumSampah?: (updater: (prev: number) => number) => void;
 }
 
 export type TabsProps = {
@@ -95,6 +96,7 @@ export type SimpleIconProps = {
     icon: string;
     iconWidth: number;
     border?: boolean;
+    roundede?: number;
 }
 
 export type BarProps = {
