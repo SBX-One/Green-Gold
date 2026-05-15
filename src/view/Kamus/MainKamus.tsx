@@ -2,6 +2,8 @@ import DataKamus from "../../data/Kamus.json"
 import imageP1 from "../../assets/webP/Product/imageP1.webp"
 import imageP2 from "../../assets/webP/Product/imageP2.webp"
 import imageP3 from "../../assets/webP/Product/imageP3.webp"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
 const imageMap: { [key: string]: string } = {
     "imageP1.webp": imageP1,
@@ -10,15 +12,23 @@ const imageMap: { [key: string]: string } = {
 }
 
 export default function MainKamus() {
+    const navigate = useNavigate()
+    const [chosenKamus, setChosenKamus] = useState<string>('');
+
     const getImagePath = (imgName: string) => {
         const fileName = imgName.split('/').pop() || imgName
         return imageMap[fileName] || imageP1
     }
 
+    function handleKamusDetail(x: string) {
+        setChosenKamus(x);
+        navigate(`/Kamus/${chosenKamus}`)
+    }
+
     return (
         <div className="flex flex-col gap-5 mb-30 mt-5">
             {DataKamus.map((item, i) => (
-                <div key={i} className="border-2 border-border-default rounded-2xl p-5 flex flex-col gap-5">
+                <div key={i} onClick={() => handleKamusDetail(item.title)} className="border-2 border-border-default rounded-2xl p-5 flex flex-col gap-5">
                     <div className="border-b-2 border-border-default -mx-5 px-5 pb-5 flex flex-col gap-1.5">
                         <h1 className="text-text-heading sm-semibold font-bold">{item.title}</h1>
                         <h1 className="text-text-placeholder xs-default">{item.para}</h1>

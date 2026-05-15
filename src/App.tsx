@@ -12,6 +12,7 @@ import VerificationCard from "./view/Saldo/Verfication";
 import AddSaldo from "./view/Saldo/AddSaldo";
 import AddSampahMain from "./view/CleanYourTrash/AddTrashMain";
 import Kamus from "./pages/Kamus";
+import KamusDetail from "./view/Kamus/KamusDetail";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Saldo/Verification/:SelectedMethod" element={<VerificationCard />} />
           <Route path="/Saldo/addSaldo/:hash" element={<AddSaldo />} />
           <Route path="/Kamus" element={<Kamus />} />
+          <Route path="/Kamus/:chosenKamus" element={<KamusDetail />} />
         </Routes>
       </BrowserRouter>
     </TrashProvider>
