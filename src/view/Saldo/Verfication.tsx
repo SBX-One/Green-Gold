@@ -9,7 +9,7 @@ import ellipse from "../../assets/svg/ellipsis.svg"
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs";
 
-export default function AddSaldo() {
+export default function VerificationCard() {
     const { selectedMethod, userInput, setUserInput } = useTrash();
     const [clickVerfikasi, setClickVerfikasi] = useState<boolean>(false);
     const userName = userData.map(item => item.nama);
@@ -26,8 +26,9 @@ export default function AddSaldo() {
     const handleChoseAccount = async () => {
         const saltRound = 10;
         const hash = await bcrypt.hash(userInput, saltRound);
+        const safeHash = encodeURIComponent(hash);
 
-        navigate(`/Saldo/${selectedMethod}/${hash}`)
+        navigate(`/Saldo/addSaldo/${safeHash}`)
     }
 
     return (

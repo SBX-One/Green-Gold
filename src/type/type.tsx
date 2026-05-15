@@ -88,7 +88,7 @@ export type TabsProps = {
 export type MenuProps = {
     TotalHarga?: number | string;
     setTotalHarga?: Dispatch<SetStateAction<number>>
-    back: string;
+    back: string | number;
 }
 
 export type SimpleIconProps = {
@@ -98,7 +98,7 @@ export type SimpleIconProps = {
 }
 
 export type BarProps = {
-    title: string;
+    title: string | string[];
     desc: string | number;
     iconR?: string;
     iconL?: string;

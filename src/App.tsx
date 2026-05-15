@@ -8,7 +8,8 @@ import Receipt from "./pages/Receipt";
 import ItemCheckout from "./pages/ItemCheckout";
 import Keranjang from "./pages/Keranjang";
 import Saldo from "./pages/Saldo";
-import AddSaldo from "./view/Saldo/Verfication";
+import VerificationCard from "./view/Saldo/Verfication";
+import AddSaldo from "./view/Saldo/AddSaldo";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
           <Route path="/Checkout+Sampah/:productName/:productId" element={<ItemCheckout />} />
           <Route path="/Keranjang" element={<Keranjang />} />
           <Route path="/Saldo" element={<Saldo />} />
-          <Route path="/Saldo/:SelectedMethod" element={<AddSaldo />} />
+          <Route path="/Saldo/Verification/:SelectedMethod" element={<VerificationCard />} />
+          <Route path="/Saldo/addSaldo/:hash" element={<AddSaldo />} />
         </Routes>
       </BrowserRouter>
     </TrashProvider>
