@@ -6,6 +6,7 @@ export type RIGOBTNPROPS = {
     chevronColor?: string,
     icon?: boolean
     onClick?: () => void;
+    disabled: boolean;
 }  
 
 export type WWSCardProps = {
@@ -114,4 +115,9 @@ export type DropDownBarProps = {
 export type SimpleTinyPill = {
     text: string;
     icon?: React.ReactNode;
+}
+
+export type LogoCardProps = {
+    logo: string;
+    title: string;
 }

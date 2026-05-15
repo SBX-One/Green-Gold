@@ -104,9 +104,7 @@ export default function ItemDetail() {
                     <div className="flex flex-row gap-3 overflow-auto -mx-5 pl-5 mb-5">
                         {selectedProduct?.variant.map((item, i) => (
                             <div key={i}>
-                                <SimplePill
-                                    text={item}
-                                    isSelected={selectedVariant === item}
+                                <SimplePill text={item} isSelected={selectedVariant === item}
                                     onClick={() => {
                                         setSelectedVariant(item);
                                         setItemVariant(item);
@@ -143,12 +141,7 @@ export default function ItemDetail() {
                                         </button>
                                     </div>
                                 ) : (
-                                    <RigoButton
-                                        text="Tambah Keranjang"
-                                        inv={true}
-                                        icon={false}
-                                        onClick={handleAdd}
-                                    />
+                                    <RigoButton text="Tambah Keranjang" inv={true} icon={false} onClick={handleAdd} />
                                 )}
                             </div>
                         </div>

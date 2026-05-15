@@ -36,6 +36,8 @@ interface TrashContextType {
     setItemNum: (itemNum: number | ((prev: number) => number)) => void;
     itemVariant: string;
     setItemVariant: (itemVariant: string) => void;
+    selectedMethod: string;
+    setSelectedMethod: (selectedMethod: string) => void;
 }
 
 const TrashContext = createContext<TrashContextType | undefined>(undefined);
@@ -50,9 +52,10 @@ export function TrashProvider({ children }: { children: ReactNode }) {
     const [title, setTitle] = useState<string>("");
     const [itemNum, setItemNum] = useState<number>(0)
     const [itemVariant, setItemVariant] = useState<string>("")
+    const [selectedMethod, setSelectedMethod] = useState<string>("")
 
     return (
-        <TrashContext.Provider value={{ itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder }}>
+        <TrashContext.Provider value={{ itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
             {children}
         </TrashContext.Provider>
     );
