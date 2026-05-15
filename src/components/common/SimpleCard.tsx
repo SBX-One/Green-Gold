@@ -52,7 +52,7 @@ export default function SimpleCard({ title, desc, button = true, icon, numSampah
 
 
     return (
-        <div className={`${mode === "add" ? "justify-center items-center" : ""} p-3 h-37.5 w-37.5 flex flex-col bg-neutral-white rounded-2xl border-2 border-border-default`}>
+        <div className={`${mode === "add" ? "justify-center items-center" : ""} relative p-3 h-37.5 w-37.5 flex flex-col bg-neutral-white rounded-2xl border-2 border-border-default`}>
             <div className="flex flex-row-reverse">
                 <img src={check} alt="stats" className={`w-4 h-4 ${mode === "add" ? "hidden" : ""}`} />
                 <div className="flex flex-1 flex-col">
@@ -80,7 +80,7 @@ export default function SimpleCard({ title, desc, button = true, icon, numSampah
             ) : (
                 <div>
                     {button && isActive ? (
-                        <div className="ml-auto mt-auto">
+                        <div className="ml-auto mt-auto absolute w-full px-3 right-0 bottom-3">
                             <button onClick={handleAdd} className="p-2.5 border-2 border-border-default rounded-2xl ">
                                 {icon ? (
                                     icon
@@ -90,7 +90,7 @@ export default function SimpleCard({ title, desc, button = true, icon, numSampah
                             </button>
                         </div>
                     ) : (
-                        <div className=" flex justify-between flex-row-reverse items-center mt-auto">
+                        <div className="absolute w-full px-3 left-0 bottom-3 flex justify-between flex-row-reverse items-center mt-auto">
                             <button onClick={handleAdd} className="p-2.5 border-2 border-border-default rounded-2xl ">
                                 <img src={plus} alt="plus" />
                             </button>
