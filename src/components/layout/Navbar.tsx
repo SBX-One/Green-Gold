@@ -22,7 +22,7 @@ export default function Navbar({ mode }: NavbarProps) {
         },
         {
             title: "Kamus",
-            links: "#"
+            links: "/Kamus"
         },
         {
             title: "Shop",
@@ -54,7 +54,7 @@ export default function Navbar({ mode }: NavbarProps) {
                     <div>
                         <div className="border-2 absolute bg-neutral-white rounded-3xl right-0 border-border-default w-2/3 p-5 flex flex-col gap-3">
                             {HomeModeList.map((item, i) => (
-                                <div key={i}>
+                                <div key={i} onClick={() => navigate(item.links)}>
                                     <div className="xs-leading-normal text-text-label hover:text-text-action px-5 py-3.5 transition-all duration-100 hover:border-2 border-border-default rounded-2xl">
                                         <h1 className="">{item.title}</h1>
                                     </div>
