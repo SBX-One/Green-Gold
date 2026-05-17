@@ -9,8 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function AddSaldo() {
     const usrName = Data.map((item) => item.nama);
-    const { userInput, selectedMethod } = useTrash();
-    const [amount, setAmount] = useState<string>("");
+    const { userInput, selectedMethod, amount, setAmount } = useTrash();
     const [saldoInput, setSaldoInput] = useState<number>(0);
     const navigate = useNavigate();
 
@@ -49,7 +48,7 @@ export default function AddSaldo() {
             console.error('Error:', error);
             alert('Terjadi kesalahan');
         }
-        navigate('/Home');
+        navigate('/Saldo/AddSaldo/Receipt');
     };
 
     return (

@@ -68,6 +68,8 @@ interface TrashContextType {
     chosenKamus: KamusItem | null;
     setChosenKamus: (chosenKamus: KamusItem) => void;
     handleCariJemput: () => void
+    amount: string;
+    setAmount: (amount: string) => void;
 
 }
 
@@ -86,6 +88,7 @@ export function TrashProvider({ children }: { children: ReactNode }) {
     const [selectedMethod, setSelectedMethod] = useState<string>("")
     const [userInput, setUserInput] = useState<string>("");
     const [chosenKamus, setChosenKamus] = useState<KamusItem | null>(null);
+    const [amount, setAmount] = useState<string>("");
     const navigate = useNavigate();
     const  handleCariJemput = () => {
             setIsOrder(true);
@@ -95,7 +98,7 @@ export function TrashProvider({ children }: { children: ReactNode }) {
         }
 
     return (
-        <TrashContext.Provider value={{ handleCariJemput, chosenKamus, setChosenKamus, userInput, setUserInput, itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
+        <TrashContext.Provider value={{ amount, setAmount, handleCariJemput, chosenKamus, setChosenKamus, userInput, setUserInput, itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
             {children}
         </TrashContext.Provider>
     );

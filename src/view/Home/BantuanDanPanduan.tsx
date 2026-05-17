@@ -37,7 +37,7 @@ export default function Bantuan() {
                     </div>
                 ))}
             </div>
-            <div className="px-28.5 flex flex-col items-center mt-16">
+            <div className="px-28 hidden md:flex flex-col items-center mt-16">
                 <LogoPill text="Grigo Foundation" />
                 <div className="text-center mt-4">
                     <h1 className="h1-heading text-text-heading">Mulai Berbelanja Dengan Poin Hasil Sampah</h1>

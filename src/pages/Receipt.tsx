@@ -6,7 +6,7 @@ import MainReceipt from "../view/Receipt/MainReceipt";
 export default function Receipt() {
     
     return (
-        <div className="text-text-body mt-14 px-5 md:px-10">
+        <div className="text-text-body px-5 md:px-10">
             <Menu back="/Home" />
             <EstimateTime />
             <FewDetails />

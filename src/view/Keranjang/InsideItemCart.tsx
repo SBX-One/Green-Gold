@@ -82,7 +82,7 @@ export default function InsideItemCart() {
 
                     return (
                         <div key={i} className="relative">
-                            <div className="absolute right-5 top-4 min-w-48.5">
+                            <div className="absolute right-5 top-4 min-w-48.5 hidden md:block   ">
                                 {/* Cek apakah item ini sudah pernah diklik (qty > 0) */}
                                 {currentItemQty > 0 ? (
                                     <div className="flex flex-1 flex-row-reverse justify-between items-center">

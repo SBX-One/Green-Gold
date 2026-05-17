@@ -30,7 +30,7 @@ export default function MainReceipt() {
                     </div>
                 ))}
             </div>
-            <div className="p-5 md:pt-10 md:p-14 pb-10 flex flex-row  justify-between">
+            <div className="p-5 md:pt-10 md:p-14 pb-10 flex flex-col md:flex-row justify-between">
                 <div className="flex flex-col">
                     <h3 className="xs-default text-text-placeholder">Trash :</h3>
                     <div className="mt-3 ">

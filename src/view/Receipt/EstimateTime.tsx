@@ -30,7 +30,7 @@ export default function EstimateTime() {
                     </div>
                 ))}
             </div>
-                <div className="flex flex-row justify-between w-full gap-12.5 py-5 mt-10">
+                <div className="hidden md:flex flex-row justify-between w-full gap-12.5 py-5 mt-10">
                     <div className="px-10.5">
                         <EstTime {...EstList[0]} />
                     </div>

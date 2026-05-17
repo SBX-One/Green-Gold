@@ -97,8 +97,8 @@ export default function ItemDetail() {
         <div className="flex flex-col">
             <div className="p-5 flex flex-col flex-1">
                 <div className="flex flex-col h-full">
-                    <div className="flex justify-center border-2 border-border-default rounded-2xl md:py-10">
-                        <img src={productImage} alt={productName} className="h-60.5 md:h-100 object-contain" />
+                    <div className="flex justify-center md:border-2 border-border-default rounded-2xl md:py-10">
+                        <img src={productImage} alt={productName} className="h-60.5 mb-5 md:h-100 object-contain" />
                     </div>
 
                     <div className="flex flex-row gap-3 overflow-auto -mx-5 md:mx-0 pl-5 md:pl-0 mb-5 md:mt-5">

@@ -15,7 +15,9 @@ export default function AddSampah() {
             </div>
             <div onClick={() => navigate('/ScanYourTrash/AddTrash')} className="mt-6 flex flex-col gap-4">
                 <h1 className="xs-default text-text-label">Ditambahkan</h1>
-                <SimpleCard mode="add"  />
+                <div className="w-fit min-w-37.5 md:min-w-52">
+                    <SimpleCard mode="add"  />
+                </div>
             </div>
         </div>
     )

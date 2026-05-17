@@ -13,6 +13,7 @@ import AddSaldo from "./view/Saldo/AddSaldo";
 import AddSampahMain from "./view/CleanYourTrash/AddTrashMain";
 import Kamus from "./pages/Kamus";
 import KamusDetail from "./view/Kamus/KamusDetail";
+import SaldoReceipt from "./view/Saldo/SaldoReceipt";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Saldo" element={<Saldo />} />
           <Route path="/Saldo/Verification/:SelectedMethod" element={<VerificationCard />} />
           <Route path="/Saldo/addSaldo/:hash" element={<AddSaldo />} />
+          <Route path="/Saldo/addSaldo/Receipt/" element={<SaldoReceipt />} />
           <Route path="/Kamus" element={<Kamus />} />
           <Route path="/Kamus/:chosenKamus" element={<KamusDetail />} />
         </Routes>
