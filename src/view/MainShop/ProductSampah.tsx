@@ -4,7 +4,6 @@ import plus from "../../assets/svg/plus.svg";
 import { useNavigate } from "react-router-dom";
 import { useTrash } from "../../context/TrashContext";
 import SimpleButton from "../../components/ui/button/SimpleButton";
-import RigoButton from "../../components/ui/button/RigoButton";
 
 export default function ProdctList() {
     const navigate = useNavigate();
@@ -20,7 +19,7 @@ export default function ProdctList() {
     return (
         <div className="mb-32.5">
             <div className="grid grid-cols-2 justify-between gap-y-10 gap-x-5 relative">
-                {products.slice(0, 4).map(product => (
+                {products.map(product => (
                     <div key={product.id} className="relative cursor-pointer">
                         <button className="p-2.5 md:hidden border-2 border-border-default rounded-full absolute top-8 right-3 bg-surface-page z-10"><img src={plus} alt="add" /></button>
                         <div onClick={() => handleProductClick(product)}>
@@ -32,9 +31,6 @@ export default function ProdctList() {
                     </div>
                 ))}
             </div>
-                <div className="flex w-full mt-10">
-                    <RigoButton text="View more" inv={true} fullWidth={true} />
-                </div>
         </div>
     )
 }

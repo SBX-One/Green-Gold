@@ -14,6 +14,7 @@ import AddSampahMain from "./view/CleanYourTrash/AddTrashMain";
 import Kamus from "./pages/Kamus";
 import KamusDetail from "./view/Kamus/KamusDetail";
 import SaldoReceipt from "./view/Saldo/SaldoReceipt";
+import MainShop from "./pages/MainShop";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePages />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/Shop" element={<MainShop />} />
           <Route path="/ScanYourTrash" element={<CleanYourTrash />} />
           <Route path="/ScanYourTrash/AddTrash" element={<AddSampahMain />} />
           <Route path="/TrashCheckout" element={<TrashCheckout />} />
