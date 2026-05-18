@@ -19,15 +19,19 @@ export default function ProdctList() {
 
     return (
         <div className="mb-32.5">
-            <div className="grid grid-cols-2 justify-between gap-y-10 gap-x-5 relative">
+            <div className="grid grid-cols-2 desktop:grid-cols-4 justify-between gap-y-10 gap-x-5 relative">
                 {products.slice(0, 4).map(product => (
-                    <div key={product.id} className="relative cursor-pointer">
-                        <button className="p-2.5 md:hidden border-2 border-border-default rounded-full absolute top-8 right-3 bg-surface-page z-10"><img src={plus} alt="add" /></button>
-                        <div onClick={() => handleProductClick(product)}>
+                    <div key={product.id} className="relative cursor-pointer flex flex-col w-full">
+                        <button className="p-2.5 md:hidden border-2 border-border-default rounded-full absolute top-8 right-3 bg-surface-page z-10">
+                            <img src={plus} alt="add" />
+                        </button>
+                        
+                        <div onClick={() => handleProductClick(product)} className="flex-1 w-full">
                             <ProductCard {...product} />
                         </div>
+                        
                         <div className="hidden md:block">
-                            <SimpleButton text="Tambah Keranjang"  />
+                            <SimpleButton text="Tambah Keranjang" />
                         </div>
                     </div>
                 ))}

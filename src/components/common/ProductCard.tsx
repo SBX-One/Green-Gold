@@ -9,14 +9,18 @@ export default function ProductCard({ img, title, harga }: ProductCardProps) {
     const src = imageMap[img] ?? '/placeholder.webp';
     const hargaDone = harga.toLocaleString('id-ID');
     return (
-        <div className="text-text-body md:min-w-80.5 w-37.5 h-48.75 md:h-116.75 justify-center flex flex-col items-center mt-5">
-            <div className="bg-surface-default w-full h-36 md:h-78.25 flex items-center justify-center rounded-sm border-2 border-border-default mb-3 transition-all duration-200 hover:bg-surface-disabled">
-                <img src={src} alt={title} className="relative h-29 md:min-h-63.25" />
-            </div>
-            <div className="text-left justify-start flex flex-col mr-auto">
-                <p className="sm-semibold text-text-heading">{'Rp.' + hargaDone}</p>
-                <h3 className="text-text-placeholder xs-default">{title}</h3>
-            </div>
+        <div className="text-text-body md:min-w-80.5 w-full flex flex-col mt-5">
+    
+            {/* aspect-square untuk rasio seimbang */}
+            <div className="bg-surface-default w-full aspect-square flex items-center justify-center rounded-sm border-2 border-border-default mb-3 transition-all duration-200 hover:bg-surface-disabled">
+            {/* pakai h-full w-full object-contain supaya gambar mengisi kotaknya */}
+            <img src={src} alt={title} className="h-full w-full object-contain p-3" />
         </div>
+
+    <div className="text-left flex flex-col">
+        <p className="sm-semibold text-text-heading">{'Rp.' + hargaDone}</p>
+        <h3 className="text-text-placeholder xs-default">{title}</h3>
+    </div>
+</div>
     )
 }

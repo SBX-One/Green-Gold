@@ -6,7 +6,7 @@ import { useTrash } from "../context/TrashContext";
  * Menggunakan global state dari TrashContext
  */
 export function useHandleSetNum() {
-    const { numSampah, setNumSampah } = useTrash();
+    const {setNumSampah } = useTrash();
 
     const handleSetNum = useCallback((index: number) => (updater: (prev: number) => number) => {
         setNumSampah(prev => {
@@ -14,7 +14,7 @@ export function useHandleSetNum() {
             updated[index] = updater(updated[index]);
             return updated
         });
-    }, [numSampah, setNumSampah]);
+    }, [setNumSampah]);
 
     return handleSetNum;
 }
