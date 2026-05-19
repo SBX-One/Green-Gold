@@ -12,9 +12,11 @@ export default function DropDown() {
         };
     }, []);
     return (  
-        <div className="absolute w-full left-0 h-full z-100 bg-neutral-white px-5 md:px-15 gap-6 md:gap-12 flex flex-col pt-16">
+        <div className="fixed inset-0 z-100 top-40 bg-white px-5 md:px-15 gap-6 md:gap-12 flex flex-col pt-5 overflow-y-auto">
             {linksList.map((link, i) => (
-                <DropDownLink key={i} title={link.title} links={link.links} />
+                <div>
+                    <DropDownLink key={i} title={link.title} links={link.links} />
+                </div>
             ))}
         </div>
     )

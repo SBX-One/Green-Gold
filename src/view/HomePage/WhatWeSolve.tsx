@@ -33,8 +33,8 @@ export default function WhatWeSolve() {
                 <LogoPill text="What We Solve" />
             </div>
             <div className="flex flex-col gap-6 mt-4 pb-16 border-b border-border-default desktop:w-122.75 desktop:text-center desktop:mx-auto">
-                <h1 className="h1-heading font-medium text-text-heading">Sampah terus meluap dengan pengelolaan konvensional.</h1>
-                <p id="WWSPara" className="md-default text-text-placeholder desktop:px-20">
+                <h1 className="h1-heading font-bold text-text-heading">Sampah terus meluap dengan pengelolaan konvensional.</h1>
+                <p id="WWSPara" className="md-default text-text-placeholder">
                     Volume sampah terus meningkat, namun sistem pengelolaan masih konvensional.
                 </p>
             </div>

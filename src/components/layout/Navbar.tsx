@@ -71,7 +71,9 @@ export default function Navbar({ mode }: NavbarProps) {
             </div>
             <div>
                 {isMenuOpen && mode !== 'home' && (
-                    <DropDown />
+                    <div className="bg-red-500">
+                        <DropDown />
+                    </div>
                 )}
             </div>
         </div>
