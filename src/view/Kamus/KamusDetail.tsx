@@ -5,7 +5,7 @@ import barcode from '../../assets/svg/scan-barcode-green.svg'
 import ProductCluster from "../../assets/webP/ProductCluster.webp"
 import { useTrash } from "../../context/TrashContext";
 import ProductData from "../../data/ProductData.json"
-import { getProductionImageMap } from "../../type/useProductImage";
+import { getProductionImageMap } from "../../helper/useProductImage";
 import MainKamus from "./MainKamus";
 import Footer from "../../components/layout/footer";
 import setting from "../../assets/svg/settings.svg"

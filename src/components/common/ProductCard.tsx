@@ -1,5 +1,5 @@
-import type { ProductCardProps } from "../../type/type"
-import { getProductionImageMap } from "../../type/useProductImage";
+import type { ProductCardProps } from "../../helper/type"
+import { getProductionImageMap } from "../../helper/useProductImage";
 
 const imageMap = getProductionImageMap();
 console.log('image map keys: ', Object.keys(imageMap));

@@ -1,4 +1,4 @@
-import type { SimplePillProps } from "../../type/type";
+import type { SimplePillProps } from "../../helper/type";
 
 export default function SimplePill({ text, isSelected, onClick }: SimplePillProps) {
     return (

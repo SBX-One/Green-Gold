@@ -1,4 +1,4 @@
-import type { DropDownBarProps } from "../../type/type";
+import type { DropDownBarProps } from "../../helper/type";
 
 export default function DropDownBar({ icon, title, onclick }: DropDownBarProps) {
     return (

@@ -2,7 +2,7 @@ import chevron from "../../assets/svg/fi_chevron-down.svg"
 import SimplePill from "../common/SimplePill"
 import { useTrash } from "../../context/TrashContext"
 import { useNavigate } from "react-router-dom";
-import type { MenuProps } from "../../type/type";
+import type { MenuProps } from "../../helper/type";
 import SimpleIcon from "../ui/icons/SimpleIcon";
 import setting from "../../assets/svg/settings.svg"
 import RigoButton from "../ui/button/RigoButton";

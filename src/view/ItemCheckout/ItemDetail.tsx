@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useTrash } from "../../context/TrashContext";
-import { getProductionImageMap } from "../../type/useProductImage";
+import { getProductionImageMap } from "../../helper/useProductImage";
 import SimplePill from "../../components/common/SimplePill";
 import SimpleIcon from "../../components/ui/icons/SimpleIcon";
 import cart from "../../assets/svg/shopping-cart-green.svg"

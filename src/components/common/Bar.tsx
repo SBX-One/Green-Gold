@@ -1,4 +1,4 @@
-import type { BarProps } from "../../type/type";
+import type { BarProps } from "../../helper/type";
 import SimpleIcon from "../ui/icons/SimpleIcon";
 
 export default function Bar({ iconL, iconR, title, desc, iconLBorder, iconRBorder }: BarProps) {

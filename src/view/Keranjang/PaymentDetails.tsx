@@ -2,11 +2,11 @@ import Bar from "../../components/common/Bar";
 import mainLogo from "../../assets/svg/LogoMain.svg"
 import ellipse from "../../assets/svg/ellipsis.svg"
 import Data from "../../data/Keranjang.json";
-import HitungTotalHarga from "../../type/HitungTotalHarga";
+import HitungTotalHarga from "../../helper/HitungTotalHarga";
 import RigoButton from "../../components/ui/button/RigoButton";
 import { useNavigate } from "react-router-dom";
 import { useTrash } from "../../context/TrashContext";
-import useWindowSize from "../../type/WindowWidthCheck";
+import useWindowSize from "../../helper/WindowWidthCheck";
 
 export default function PaymentDetails() {
     const totalHarga = HitungTotalHarga(Data);

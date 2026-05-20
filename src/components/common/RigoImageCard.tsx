@@ -1,4 +1,4 @@
-import type { RigoImageCardProps } from "../../type/type"
+import type { RigoImageCardProps } from "../../helper/type"
 import ArrowIcon from "../ui/icons/ArrowIcon"
 
 export default function RigoImageCard({ title, date, image, customImageClass }: RigoImageCardProps) {

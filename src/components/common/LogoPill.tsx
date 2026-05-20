@@ -1,5 +1,5 @@
 import logo from "../../assets/svg/LogoMain.svg"
-import type { logoPillProps } from "../../type/type"
+import type { logoPillProps } from "../../helper/type"
 
 export default function LogoPill ({ text }: logoPillProps) {
     return (

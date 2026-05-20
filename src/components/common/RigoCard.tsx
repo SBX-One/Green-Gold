@@ -1,4 +1,4 @@
-import type { WWSCardProps } from "../../type/type"
+import type { WWSCardProps } from "../../helper/type"
 import ArrowIcon from "../ui/icons/ArrowIcon";
 
 export default function WWSCard({ title, date, desc, volume}: WWSCardProps   ) {

@@ -1,4 +1,4 @@
-import type { SimpleCardProps } from "../../type/type"
+import type { SimpleCardProps } from "../../helper/type"
 import plus from "../../assets/svg/plus.svg"
 import minus from '../../assets/svg/minus.svg'
 import { useState, useEffect } from "react"

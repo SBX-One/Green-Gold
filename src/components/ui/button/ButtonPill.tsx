@@ -1,4 +1,4 @@
-import type { ButtonPillProps } from "../../../type/type";
+import type { ButtonPillProps } from "../../../helper/type";
 
 export default function ButtonPill({ onclick, text, disabledd }: ButtonPillProps) {
     return (

@@ -2,7 +2,7 @@ import Bar from "../../components/common/Bar";
 import house from "../../assets/svg/house.svg"
 import map from "../../assets/svg/map.svg"
 import data from "../../data/Keranjang.json"
-import HitungTotalHarga from "../../type/HitungTotalHarga";
+import HitungTotalHarga from "../../helper/HitungTotalHarga";
 import Image from "../../assets/svg/image.svg"
 import { useTrash } from "../../context/TrashContext";
 import { useRef, useState } from "react";

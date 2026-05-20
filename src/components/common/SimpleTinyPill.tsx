@@ -1,4 +1,4 @@
-import type { SimpleTinyPill } from "../../type/type";
+import type { SimpleTinyPill } from "../../helper/type";
 
 export default function SimpleTinyPill({ text, icon }: SimpleTinyPill) {
     return (

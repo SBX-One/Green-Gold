@@ -9,11 +9,15 @@ export function useHandleSetNum() {
     const {setNumSampah } = useTrash();
 
     const handleSetNum = useCallback((index: number) => (updater: (prev: number) => number) => {
-        setNumSampah(prev => {
-            const updated = [...prev];
-            updated[index] = updater(updated[index]);
-            return updated
-        });
+        if (typeof setNumSampah === 'function') {
+            (setNumSampah as React.Dispatch<React.SetStateAction<number[]>>)((prev) => {
+            const updated = [...(prev || [])];
+            if (updated[index] !== undefined) {
+                updated[index] = updater(updated[index]);
+            }
+            return updated;
+            });
+        }
     }, [setNumSampah]);
 
     return handleSetNum;

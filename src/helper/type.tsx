@@ -109,7 +109,7 @@ export type SimpleIconProps = {
 export type BarProps = {
     title: string | string[];
     desc: string | number;
-    iconR?: string | React.ReactNode;
+    iconR?: string;
     iconL?: string;
     iconLBorder?: boolean;
     iconRBorder?: boolean;

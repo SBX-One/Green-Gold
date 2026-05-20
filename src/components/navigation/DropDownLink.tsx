@@ -1,4 +1,4 @@
-import type { DropDownProps } from "../../type/type";
+import type { DropDownProps } from "../../helper/type";
 // import arrow from '../assets/svg/arrow-up-right.svg'
 import ArrowIcon from "../ui/icons/ArrowIcon";
 

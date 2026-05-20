@@ -9,7 +9,7 @@ import setting from "../../assets/svg/settings.svg"
 import mainLogo from "../../assets/svg/LogoMain.svg"
 
 import {useState} from "react"
-import type { NavbarProps } from "../../type/type"
+import type { NavbarProps } from "../../helper/type"
 import { useNavigate } from "react-router-dom"
 import SimpleIcon from "../ui/icons/SimpleIcon"
 

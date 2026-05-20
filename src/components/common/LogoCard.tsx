@@ -1,4 +1,4 @@
-import type { LogoCardProps } from "../../type/type"
+import type { LogoCardProps } from "../../helper/type"
 
 export default function LogoCard({ logo, title }: LogoCardProps ) {
     return (

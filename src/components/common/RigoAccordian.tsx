@@ -1,5 +1,5 @@
 import { useState } from "react"
-import type { RigoAccordianProps } from "../../type/type"
+import type { RigoAccordianProps } from "../../helper/type"
 import chevronDown from "../../assets/svg/fi_chevron-down.svg"
 
 export default function RigoAccordian({ title, content }: RigoAccordianProps) {

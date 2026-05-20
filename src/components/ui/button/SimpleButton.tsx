@@ -1,4 +1,4 @@
-import type { SimpleButtonProps } from "../../../type/type"
+import type { SimpleButtonProps } from "../../../helper/type"
 
 export default function SimpleButton({ text, icon, onClick }: SimpleButtonProps) {
     return (

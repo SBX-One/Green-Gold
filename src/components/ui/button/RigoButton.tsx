@@ -1,4 +1,4 @@
-import type { RIGOBTNPROPS } from "../../../type/type"
+import type { RIGOBTNPROPS } from "../../../helper/type"
 
 export default function RigoButton({ inv, text, icon = true, onClick, disabled, fullWidth }: RIGOBTNPROPS) {
     return (

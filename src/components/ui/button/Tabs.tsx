@@ -1,4 +1,4 @@
-import type { TabsProps } from "../../../type/type"
+import type { TabsProps } from "../../../helper/type"
 import { useRef } from "react"
 import { gsap } from "gsap"
 

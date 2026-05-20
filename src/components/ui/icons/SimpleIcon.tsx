@@ -1,4 +1,4 @@
-import type { SimpleIconProps } from "../../../type/type"
+import type { SimpleIconProps } from "../../../helper/type"
 
 export default function SimpleIcon({ icon, iconWidth, border = true, roundede = 16, text, textClass }: SimpleIconProps) {
     return (
