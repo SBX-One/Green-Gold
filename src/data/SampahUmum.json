@@ -3,28 +3,44 @@
         "name" :"plastik", 
         "Category" : [
             {
-                "title": "plastic",
+                "title": "PET",
                 "desc": "Rp. 1000/kg"
             },
             {
-                "title": "Cardboard",
+                "title": "PVC",
                 "desc": "Rp. 1000/kg"
             },
             {
-                "title": "PET Plastic",
+                "title": "PP",
                 "desc": "Rp. 1000/kg"
             },
             {
-                "title": "Other",
+                "title": "HDPE",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "LDPE",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "PS",
                 "desc": "Rp. 1000/kg"
             }
         ]
     },
     {
-        "name" :"plastik", 
+        "name" :"Kertas", 
         "Category" : [
             {
-                "title": "plastic",
+                "title": "Kertas Putih/HVS",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "Karton",
+                "desc": "Rp. 1000/kg"
+            },
+            {
+                "title": "Struk Pembelian",
                 "desc": "Rp. 1000/kg"
             },
             {
@@ -32,32 +48,33 @@
                 "desc": "Rp. 1000/kg"
             },
             {
-                "title": "PET Plastic",
-                "desc": "Rp. 1000/kg"
-            },
-            {
-                "title": "Other",
+                "title": "Koran",
                 "desc": "Rp. 1000/kg"
             }
         ]
     },
     {
-        "name" :"plastik", 
+        "name" :"Logam", 
         "Category" : [
             {
-                "title": "plastic",
+                "title": "Aluminium",
                 "desc": "Rp. 1000/kg"
             },
             {
-                "title": "Cardboard",
+                "title": "Besi / Baja / Seng",
+                "desc": "Rp. 1000/kg"
+            }
+        ]
+    },
+    {
+        "name" :"Lainnya", 
+        "Category" : [
+            {
+                "title": "Kaca Wadah Kemasan",
                 "desc": "Rp. 1000/kg"
             },
             {
-                "title": "PET Plastic",
-                "desc": "Rp. 1000/kg"
-            },
-            {
-                "title": "Other",
+                "title": "Multi-Material / Kemasan Aseptik",
                 "desc": "Rp. 1000/kg"
             }
         ]

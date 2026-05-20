@@ -70,7 +70,7 @@ export default function InsideItemCart() {
     return ( 
         <div className="px-5 mt-5">
             <Bar iconL={house} iconR={map} title="Jl. Pulau Ambon No.8" desc="Denpasae Barat, Bali" />
-            <div className="flex flex-row gap-5 desktop:mt-16">
+            <div className="flex desktop:flex-row flex-col gap-5 desktop:mt-16">
                 <div className="desktop:w-1/2">
                 <div className="mt-10 desktop:mt-0">
                     <h1 className="sm-semibold text-text-label">Sampah Umum</h1>

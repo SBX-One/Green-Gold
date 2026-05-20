@@ -36,7 +36,7 @@ export default function Navbar({ mode }: NavbarProps) {
         <div className="sticky top-0 z-200">
             <div className={`bg-neutral-white left-0 w-screen ml-[calc(50%-50vw)] py-7 desktop:py-7.5 md:py-14 px-10 md:px-15 xl:px-30 flex justify-between border-b-2 border-[#DEDEDE] items-center ${mode === 'home' ? 'max-h-21' : ''}`}>
                 <img src={Logo} alt="Company Logo" className={`${mode === "home" ? "pr-14 desktop:border-r-2 border-border-default hidden md:block" : ""}`} onClick={() => navigate('/Home')} />
-                <img src={mainLogo} alt="Company Logo" className={`${mode === "home" ? "pr-14 md:hidden" : ""}`} onClick={() => navigate('/Home')} />
+                <img src={mainLogo} alt="Company Logo" className={`${mode === "home" ? "pr-14 md:hidden" : "hidden"}`} onClick={() => navigate('/Home')} />
                 <div className="flex flex-row desktop:flex-row-reverse desktop:w-full items-center gap-6">
                     <div className="flex flex-row desktop:flex-row-reverse items-center gap-6 desktop:mr-6">
                         <img onClick={() => navigate('/Keranjang')} src={cart} alt="Cart" className={`w-4 h-4 relative right-3 ${mode === 'home' ? 'block' : 'hidden'}`} />

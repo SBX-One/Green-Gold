@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 // Perbaikan 1: Gunakan import type
 import type { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
@@ -51,6 +51,9 @@ interface TrashContextType {
     setNumSampah: (sampah: number[]) => void;
     selectedTrash: SelectedTrashItem[];
     setSelectedTrash: (trash: SelectedTrashItem[]) => void;
+    addToTrash: (name: string, quantity: number, harga: number) => void;
+    updateTrashQuantity: (name: string, quantity: number) => void;
+    removeFromTrash: (name: string) => void;
     selectedProduct: SelectedProduct | null;
     setSelectedProduct: (product: SelectedProduct | null) => void;
     title: string;
@@ -70,7 +73,7 @@ interface TrashContextType {
     handleCariJemput: () => void
     amount: string;
     setAmount: (amount: string) => void;
-
+    resetTrash: () => void;
 }
 
 const TrashContext = createContext<TrashContextType | undefined>(undefined);
@@ -90,15 +93,55 @@ export function TrashProvider({ children }: { children: ReactNode }) {
     const [chosenKamus, setChosenKamus] = useState<KamusItem | null>(null);
     const [amount, setAmount] = useState<string>("");
     const navigate = useNavigate();
-    const  handleCariJemput = () => {
+    
+    const handleCariJemput = () => {
             setIsOrder(true);
             navigate('/Home');
-    
             console.log("back to home")
         }
 
+    const resetTrash = () => {
+        setSelectedTrash([]);
+        setTotalHarga(0);
+        setNumSampah([0, 0, 0, 0]);
+    };
+
+    // Automatically calculate totalHarga
+    useEffect(() => {
+        const total = selectedTrash.reduce((sum, item) => sum + (item.quantity * item.harga), 0);
+        setTotalHarga(total);
+    }, [selectedTrash, setTotalHarga]);
+
+    // Fungsi untuk manage selectedTrash
+    const addToTrash = (name: string, quantity: number, harga: number) => {
+        setSelectedTrash(prev => {
+            const existing = prev.find(item => item.name === name);
+            if (existing) {
+                // Update quantity jika sudah ada
+                return prev.map(item => 
+                    item.name === name ? { ...item, quantity } : item
+                );
+            } else {
+                // Tambah item baru
+                return [...prev, { name, quantity, harga }];
+            }
+        });
+    };
+
+    const updateTrashQuantity = (name: string, quantity: number) => {
+        setSelectedTrash(prev => 
+            prev.map(item => 
+                item.name === name ? { ...item, quantity } : item
+            )
+        );
+    };
+
+    const removeFromTrash = (name: string) => {
+        setSelectedTrash(prev => prev.filter(item => item.name !== name));
+    };
+
     return (
-        <TrashContext.Provider value={{ amount, setAmount, handleCariJemput, chosenKamus, setChosenKamus, userInput, setUserInput, itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
+        <TrashContext.Provider value={{ amount, setAmount, addToTrash, updateTrashQuantity, removeFromTrash, handleCariJemput, resetTrash, chosenKamus, setChosenKamus, userInput, setUserInput, itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
             {children}
         </TrashContext.Provider>
     );

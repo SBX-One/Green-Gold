@@ -1,32 +1,9 @@
 import SimpleCard from "../../components/common/SimpleCard"
 import RigoButton from "../../components/ui/button/RigoButton";
 import { useTrash } from "../../context/TrashContext"
-import { useHandleSetNum } from "../../type/handleSetNumt";
 
 export default function IsiSampah() {
-    const { numSampah, handleCariJemput } = useTrash();
-    const handleSetNum = useHandleSetNum();
-
-    const SampahUmumList = [
-        {
-            title: "Plastik",
-            desc: "Rp. 1000/kg",
-            harga: 1000,
-        },
-        {
-            title: "Kertas",
-            desc: "Rp. 1000/kg",
-            harga: 1000,
-        },
-        {
-            title: "Kaleng Aluminium",
-            desc: "Rp. 1000/kg",
-            harga: 1000,
-        }
-    ]
-
-    // Hitung total kg
-    // const totalKg = numSampah.reduce((acc, val) => acc + val, 0);
+    const { selectedTrash, updateTrashQuantity, removeFromTrash, handleCariJemput } = useTrash();
 
     return (
         <div>
@@ -37,9 +14,21 @@ export default function IsiSampah() {
                 </div>
             </div>
             <div className="grid grid-cols-2 gap-5 md:grid-cols-3 mt-5 mb-3">
-                {SampahUmumList.map((item, i) => (
+                {selectedTrash.map((item, i) => (
                     <div key={i}>
-                        <SimpleCard {...item} numSampah={numSampah[i]} setNumSampah={handleSetNum(i)} />
+                        <SimpleCard 
+                            title={item.name}
+                            desc={`Rp. ${item.harga}/kg`}
+                            numSampah={item.quantity}
+                            setNumSampah={(updater) => {
+                                const newQty = updater(item.quantity);
+                                if (newQty === 0) {
+                                    removeFromTrash(item.name);
+                                } else {
+                                    updateTrashQuantity(item.name, newQty);
+                                }
+                            }}
+                        />
                     </div>
                 ))}
             </div>

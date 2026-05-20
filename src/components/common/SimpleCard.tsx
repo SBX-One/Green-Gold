@@ -1,13 +1,22 @@
 import type { SimpleCardProps } from "../../type/type"
 import plus from "../../assets/svg/plus.svg"
 import minus from '../../assets/svg/minus.svg'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import check from "../../assets/svg/stats-up.svg"
 import PlusIcon from "../ui/icons/PlusIcon"
 
 export default function SimpleCard({ title, desc, button = true, icon, numSampah = 0, setNumSampah, mode }: SimpleCardProps) {
-    const [isActive, setIsActive] = useState<boolean>(true)
+    const [isActive, setIsActive] = useState<boolean>(numSampah === 0 ? true : false)
     const [localNumSampah, setLocalNumSampah] = useState<number>(0)
+
+    // Sync isActive dengan numSampah prop
+    useEffect(() => {
+        if (numSampah > 0) {
+            setIsActive(false);
+        } else {
+            setIsActive(true);
+        }
+    }, [numSampah]);
 
     const handleAdd = () => {
         if (setNumSampah) {
@@ -81,7 +90,7 @@ export default function SimpleCard({ title, desc, button = true, icon, numSampah
             ) : (
                 <div>
                     {button && isActive ? (
-                        <div className="ml-auto mt-auto absolute w-full px-3 right-0 bottom-3">
+                        <div className="ml-auto mt-auto absolute  w-fit px-3 right-0 bottom-3">
                             <button onClick={handleAdd} className="p-2.5 border-2 border-border-default rounded-2xl ">
                                 {icon ? (
                                     icon

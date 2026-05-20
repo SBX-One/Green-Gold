@@ -9,7 +9,7 @@ export default function CleanYourTrash() {
     const navigate = useNavigate()
 
     return (
-        <div className="p-5 md:p-10 flex flex-col max-w-205 mx-auto">
+        <div className="px-5 md:px-10 flex flex-col max-w-205 mx-auto">
             <Menu back="/Home" onclick={() => navigate('/TrashCheckout')} />
             <SampahUmum />
             <ScanMeth />

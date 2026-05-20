@@ -1,236 +1,362 @@
 ﻿[
     {
-        "title": "plastik",
+        "title": "PET",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Botol plastik, kantong kresek, dll",
+        "desc": "Barang : Botol plastik, kantong kresek, dll",
         "product": [
-            {
-                "id": 1,
-                "img": "../../webp/Product/imageP1.webp"
-            },
-            {
-                "id": 2,
-                "img": "../../webp/Product/imageP2.webp"
-            },
-            {
-                "id": 3,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 4,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 5,
-                "img": "../../webp/Product/imageP3.webp"
-            }
+        { "id": 1, "img": "../../webp/Product/imageP5.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP12.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP2.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP8.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP1.webp" }
         ],
         "kamusDetail": [
-            {
-                "mainDesc": "Botol air plastik PET (Polyethylene Terephthalate) adalah wadah bening, dan kuat yang ditandai dengan kode daur ulang angka 1.",
-                "merek": "Aqua, Le Minerale, Coca-Cola, Sprite, Pocari Sweat, Teh Pucuk Harum, Ades, Frestea, Cleo, Vit, dll.",
-                "potensi": "Plastik food grade, serat sintetis, kerajinan tangan, hingga filamen printer 3D.",
-                "kerjasama": [
-                    { "productId": 1 },
-                    { "productId": 2 },
-                    { "productId": 3 }
-                ]
-            }
+        {
+            "mainDesc": "Bening, keras tapi bisa diremas. Biasanya digunakan untuk botol air mineral, botol soda, dan toples selai.",
+            "merek": "Aqua, Le Minerale, Coca-Cola, Sprite, Pocari Sweat, Teh Pucuk Harum, Ades, Frestea, Cleo, Vit, dll.",
+            "potensi": "Plastik food grade, serat sintetis, kerajinan tangan, hingga filamen printer 3D.",
+            "kerjasama": [
+            { "productId": 1 },
+            { "productId": 2 },
+            { "productId": 3 }
+            ]
+        }
         ]
     },
     {
-        "title": "kertas",
+        "title": "HDPE",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Botol plastik, kantong kresek, dll",
+        "desc": "Barang : Botol plastik, kantong kresek, dll",
         "product": [
-            {
-                "id": 1,
-                "img": "../../webp/Product/imageP1.webp"
-            },
-            {
-                "id": 2,
-                "img": "../../webp/Product/imageP2.webp"
-            },
-            {
-                "id": 3,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 4,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 5,
-                "img": "../../webp/Product/imageP3.webp"
-            }
+        { "id": 1, "img": "../../webp/Product/imageP9.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP4.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP11.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP3.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP7.webp" }
         ],
         "kamusDetail": [
-            {
-                "mainDesc": "Kertas adalah material yang dibuat dari serat cellulose.",
-                "merek": "Hvs, Art Paper, Kraft Paper, Cardboard, dll.",
-                "potensi": "Kertas daur ulang, bahan kemasan, produk kerajinan, hingga pulp berkualitas tinggi.",
-                "kerjasama": [
-                    { "productId": 4 },
-                    { "productId": 5 },
-                    { "productId": 6 }
-                ]
-            }
+        {
+            "mainDesc": "Plastik tebal, buram/kaku, tahan kimia. Biasanya untuk botol detergen, botol sampo, dan jeriken susu.",
+            "merek": "Rinso Cair, Downy, Lifebuoy Sabun Cair, Pantene Sampo, Sunsilk, Papi Clean, Bayclin, Pepsodent Mouthwash, Jerigen Greenfields, Cimahi Yogurt Milk, dll.",
+            "potensi": "Plastik food grade, serat sintetis, kerajinan tangan, hingga filamen printer 3D.",
+            "kerjasama": [
+            { "productId": 1 },
+            { "productId": 2 },
+            { "productId": 3 }
+            ]
+        }
         ]
     },
     {
-        "title": "Minyak Jelantah",
+        "title": "PVC",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Minyak goreng bekas yang sudah tidak digunakan",
+        "desc": "Barang : Botol plastik, kantong kresek, dll",
         "product": [
-            {
-                "id": 1,
-                "img": "../../webp/Product/imageP1.webp"
-            },
-            {
-                "id": 2,
-                "img": "../../webp/Product/imageP2.webp"
-            },
-            {
-                "id": 3,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 4,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 5,
-                "img": "../../webp/Product/imageP3.webp"
-            }
+        { "id": 1, "img": "../../webp/Product/imageP2.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP10.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP6.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP1.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP12.webp" }
         ],
         "kamusDetail": [
-            {
-                "mainDesc": "Minyak jelantah adalah minyak goreng bekas yang telah digunakan untuk memasak dan dapat didaur ulang.",
-                "merek": "Semua merk minyak goreng bekas dari rumah tangga maupun restoran.",
-                "potensi": "Biodiesel, sabun, kosmetik, hingga pakan ternak berkualitas.",
-                "kerjasama": [
-                    { "productId": 7 },
-                    { "productId": 8 },
-                    { "productId": 9 }
-                ]
-            }
+        {
+            "mainDesc": "Keras dan elastis (bisa mengandung klorin). Biasanya untuk pipa, kabel, atau beberapa pembungkus makanan (cling wrap).",
+            "merek": "Pipa Air, Kabel Listrik, Lantai Vinyl, Plastik Mika, dll.",
+            "potensi": "Plastik food grade, serat sintetis, kerajinan tangan, hingga filamen printer 3D.",
+            "kerjasama": [
+            { "productId": 1 },
+            { "productId": 2 },
+            { "productId": 3 }
+            ]
+        }
         ]
     },
     {
-        "title": "Kaleng Aluminium",
+        "title": "LDPE",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Kaleng bekas minuman dan kemasan aluminium",
+        "desc": "Barang : Botol plastik, kantong kresek, dll",
         "product": [
-            {
-                "id": 1,
-                "img": "../../webp/Product/imageP1.webp"
-            },
-            {
-                "id": 2,
-                "img": "../../webp/Product/imageP2.webp"
-            },
-            {
-                "id": 3,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 4,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 5,
-                "img": "../../webp/Product/imageP3.webp"
-            }
+        { "id": 1, "img": "../../webp/Product/imageP11.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP3.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP8.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP5.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP9.webp" }
         ],
         "kamusDetail": [
-            {
-                "mainDesc": "Kaleng aluminium adalah kemasan ringan yang dapat 100% didaur ulang tanpa kehilangan kualitasnya.",
-                "merek": "Coca-Cola, Pepsi, Fanta, RedBull, Beer, dan berbagai merek minuman lainnya.",
-                "potensi": "Aluminium baru, otomotif, konstruksi, elektronik, hingga aerospace.",
-                "kerjasama": [
-                    { "productId": 10 },
-                    { "productId": 11 },
-                    { "productId": 12 }
-                ]
-            }
+        {
+            "mainDesc": "Lentur, elastis, kuat. Biasanya untuk kantong kresek, bubble wrap, dan plastik pembungkus roti.",
+            "merek": "Kantong Kresek Alfamart, Bubble Wrap Tokopedia, Plastik Polymailer J&T, Plastik Sari Roti, Plastik Es Lilin, Plastik Klip Cetik, dll.",
+            "potensi": "Plastik food grade, serat sintetis, kerajinan tangan, hingga filamen printer 3D.",
+            "kerjasama": [
+            { "productId": 1 },
+            { "productId": 2 },
+            { "productId": 3 }
+            ]
+        }
         ]
     },
     {
-        "title": "Kardus",
+        "title": "PP",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Kardus dan corrugated paper bekas",
+        "desc": "Barang : Botol plastik, kantong kresek, dll",
         "product": [
-            {
-                "id": 1,
-                "img": "../../webp/Product/imageP1.webp"
-            },
-            {
-                "id": 2,
-                "img": "../../webp/Product/imageP2.webp"
-            },
-            {
-                "id": 3,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 4,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 5,
-                "img": "../../webp/Product/imageP3.webp"
-            }
+        { "id": 1, "img": "../../webp/Product/imageP4.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP7.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP1.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP10.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP6.webp" }
         ],
         "kamusDetail": [
-            {
-                "mainDesc": "Kardus adalah kemasan kertas berlapis yang kuat dan fleksibel untuk pengiriman dan penyimpanan.",
-                "merek": "Kemasan dari online shop, supermarket, dan berbagai industri retail.",
-                "potensi": "Kertas daur ulang, bahan kemasan baru, pulp berkualitas, hingga produk kertas lainnya.",
-                "kerjasama": [
-                    { "productId": 1 },
-                    { "productId": 2 },
-                    { "productId": 3 }
-                ]
-            }
+        {
+            "mainDesc": "Kaku tapi fleksibel, tahan panas, permukaan agak licin. Biasanya untuk tutup botol, wadah makanan (Tupperware), sedotan, dan cup es kopi.",
+            "merek": "Thinwall Mangkok Bakso, Tupperware, Cup Kopi Kenangan, Cup Chatime, Sedotan Straw, Tutup Botol Aqua, Botol Susu Baby Huki, Khong Guan Plastik Inner, dll.",
+            "potensi": "Plastik food grade, serat sintetis, kerajinan tangan, hingga filamen printer 3D.",
+            "kerjasama": [
+            { "productId": 1 },
+            { "productId": 2 },
+            { "productId": 3 }
+            ]
+        }
         ]
     },
     {
-        "title": "Plastik PET",
+        "title": "PS",
         "para": "Rp. 1000/kg",
-        "desc": "Barang :  Botol plastik PET dan kemasan transparan",
+        "desc": "Barang : Botol plastik, kantong kresek, dll",
         "product": [
-            {
-                "id": 1,
-                "img": "../../webp/Product/imageP1.webp"
-            },
-            {
-                "id": 2,
-                "img": "../../webp/Product/imageP2.webp"
-            },
-            {
-                "id": 3,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 4,
-                "img": "../../webp/Product/imageP3.webp"
-            },
-            {
-                "id": 5,
-                "img": "../../webp/Product/imageP3.webp"
-            }
+        { "id": 1, "img": "../../webp/Product/imageP8.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP12.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP2.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP5.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP11.webp" }
         ],
         "kamusDetail": [
-            {
-                "mainDesc": "Plastik PET adalah thermoplastik yang transparan dan tahan lama dengan kode daur ulang angka 1.",
-                "merek": "Aqua, Le Minerale, Sprite, Coca-Cola, Pocari Sweat, Teh Pucuk, Ades, dan lain-lain.",
-                "potensi": "Serat sintetis (polyester), botol baru, kemasan makanan, hingga produk tekstil berkualitas.",
-                "kerjasama": [
-                    { "productId": 4 },
-                    { "productId": 5 },
-                    { "productId": 6 }
-                ]
-            }
+        {
+            "mainDesc": "Rapuh, mudah patah, atau berbentuk styrofoam. Biasanya untuk wadah mi instan cup atau sendok plastik sekali pakai.",
+            "merek": "Pop Mie Cup, Styrofoam Bubur Ayam, Sendok Plastik Bebek, Mika Kue Nastar, Casing CD Maxell, Gantungan Baju Lion Star, dll.",
+            "potensi": "Plastik food grade, serat sintetis, kerajinan tangan, hingga filamen printer 3D.",
+            "kerjasama": [
+            { "productId": 1 },
+            { "productId": 2 },
+            { "productId": 3 }
+            ]
+        }
+        ]
+    },
+    {
+        "title": "Kertas Putih/HVS",
+        "para": "Rp. 1000/kg",
+        "desc": "Barang : Kertas dan dokumen bekas",
+        "product": [
+        { "id": 1, "img": "../../webp/Product/imageP3.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP6.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP9.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP1.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP4.webp" }
+        ],
+        "kamusDetail": [
+        {
+            "mainDesc": "Kertas serat murni berkualitas tinggi tanpa lapisan plastik (wax). Nilai jual kembalinya paling tinggi di antara jenis kertas lain.",
+            "merek": "Kertas Sinar Dunia (Sidu), PaperOne, Kertas Binder Kiky, Amplop Jaya, Buku Tulis Vision, Lembar Fotokopi Canon, dll.",
+            "potensi": "Kertas daur ulang, bahan kemasan, produk kerajinan, hingga pulp berkualitas tinggi.",
+            "kerjasama": [
+            { "productId": 4 },
+            { "productId": 5 },
+            { "productId": 6 }
+            ]
+        }
+        ]
+    },
+    {
+        "title": "Cardboard",
+        "para": "Rp. 1000/kg",
+        "desc": "Barang : Kardus dan corrugated paper bekas",
+        "product": [
+        { "id": 1, "img": "../../webp/Product/imageP7.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP10.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP2.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP12.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP5.webp" }
+        ],
+        "kamusDetail": [
+        {
+            "mainDesc": "Kardus cokelat tebal yang memiliki struktur bergelombang di lapisan tengahnya untuk menahan benturan.",
+            "merek": "Kardus Paket Shopee, Kardus Indomie, Kardus TV Samsung, Box Pizza Hut, Egg Tray Karton, Kardus Aqua Gelas, dll.",
+            "potensi": "Kertas daur ulang, bahan kemasan baru, pulp berkualitas, hingga produk kertas lainnya.",
+            "kerjasama": [
+            { "productId": 1 },
+            { "productId": 2 },
+            { "productId": 3 }
+            ]
+        }
+        ]
+    },
+    {
+        "title": "Karton",
+        "para": "Rp. 1000/kg",
+        "desc": "Barang : Kotak kemasan karton",
+        "product": [
+        { "id": 1, "img": "../../webp/Product/imageP1.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP8.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP11.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP3.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP6.webp" }
+        ],
+        "kamusDetail": [
+        {
+            "mainDesc": "Karton tipis yang biasanya satu sisinya berwarna putih dan sisi lainnya abu-abu cokelat kasar, sering dilapisi cetakan glossy gambar produk.",
+            "merek": "Kotak Koko Krunch, Kotak Pepsodent, Kotak Sangobion, Kotak Sepatu Adidas, Box Martabak San Francisco, Kotak Sabun Nuvo, dll.",
+            "potensi": "Kertas daur ulang, bahan kemasan, produk kerajinan, hingga pulp berkualitas tinggi.",
+            "kerjasama": [
+            { "productId": 4 },
+            { "productId": 5 },
+            { "productId": 6 }
+            ]
+        }
+        ]
+    },
+    {
+        "title": "Koran",
+        "para": "Rp. 1000/kg",
+        "desc": "Barang : Koran bekas dan kertas buram",
+        "product": [
+        { "id": 1, "img": "../../webp/Product/imageP12.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP2.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP5.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP9.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP7.webp" }
+        ],
+        "kamusDetail": [
+        {
+            "mainDesc": "Kertas dengan densitas rendah, berserat kasar, bertekstur tipis, dan biasanya berwarna agak abu-abu atau kekuningan karena menggunakan pulp mekanis murah.",
+            "merek": "Koran Kompas, Koran Jawa Pos, Selebaran Katalog Superindo, Kertas Buram Kiky, Kertas Alas Gorengan, dll.",
+            "potensi": "Kertas daur ulang, bahan kemasan, produk kerajinan, hingga pulp berkualitas tinggi.",
+            "kerjasama": [
+            { "productId": 4 },
+            { "productId": 5 },
+            { "productId": 6 }
+            ]
+        }
+        ]
+    },
+    {
+        "title": "Struk Pembelian",
+        "para": "Rp. 1000/kg",
+        "desc": "Barang : Kertas struk termal bekas",
+        "product": [
+        { "id": 1, "img": "../../webp/Product/imageP4.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP10.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP1.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP8.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP3.webp" }
+        ],
+        "kamusDetail": [
+        {
+            "mainDesc": "Kertas berpermukaan licin yang dilapisi bahan kimia khusus (seperti BPA/BPS) untuk memunculkan warna saat terkena panas dari printer termal tanpa tinta.",
+            "merek": "Struk Belanja Alfamart/Indomaret, Struk ATM Mandiri, Kertas Tiket Bioskop XXI, Struk Parkir Mall, Resi Pengiriman Kurir Print-out Thermal, dll.",
+            "potensi": "Kertas daur ulang, bahan kemasan, produk kerajinan, hingga pulp berkualitas tinggi.",
+            "kerjasama": [
+            { "productId": 4 },
+            { "productId": 5 },
+            { "productId": 6 }
+            ]
+        }
+        ]
+    },
+    {
+        "title": "Aluminium",
+        "para": "Rp. 1000/kg",
+        "desc": "Barang : Kaleng bekas minuman dan kemasan aluminium",
+        "product": [
+        { "id": 1, "img": "../../webp/Product/imageP6.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP11.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP2.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP7.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP9.webp" }
+        ],
+        "kamusDetail": [
+        {
+            "mainDesc": "Logam ringan, tidak berkarat, tidak menempel pada magnet, dan sangat mudah dipipihkan/diinjak hingga gepeng.",
+            "merek": "Coca-Cola Kaleng, Larutan Cap Badak Kaleng, Bear Brand, Red Bull, Sprite Kaleng, Aluminium Foil Clean Plus, Cup Klapertart, dll.",
+            "potensi": "Aluminium baru, otomotif, konstruksi, elektronik, hingga aerospace.",
+            "kerjasama": [
+            { "productId": 10 },
+            { "productId": 11 },
+            { "productId": 12 }
+            ]
+        }
+        ]
+    },
+    {
+        "title": "Besi / Baja / Seng",
+        "para": "Rp. 1000/kg",
+        "desc": "Barang : Kaleng logam bekas dan besi tua",
+        "product": [
+        { "id": 1, "img": "../../webp/Product/imageP10.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP1.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP5.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP12.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP4.webp" }
+        ],
+        "kamusDetail": [
+        {
+            "mainDesc": "Logam berat, kaku, menempel erat pada magnet, dan rentan berkarat jika terkena air dalam waktu lama.",
+            "merek": "Susu Kental Manis Frisian Flag, Sarden ABC, Kornet Pronas, Kaleng Khong Guan, Tutup Botol Sirup Marjan, Tutup Botol Kecap Bango, Kaleng Cat Avian, dll.",
+            "potensi": "Aluminium baru, otomotif, konstruksi, elektronik, hingga aerospace.",
+            "kerjasama": [
+            { "productId": 10 },
+            { "productId": 11 },
+            { "productId": 12 }
+            ]
+        }
+        ]
+    },
+    {
+        "title": "Kaca Wadah Kemasan",
+        "para": "Rp. 1000/kg",
+        "desc": "Barang : Botol dan toples kaca bekas",
+        "product": [
+        { "id": 1, "img": "../../webp/Product/imageP3.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP8.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP11.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP2.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP6.webp" }
+        ],
+        "kamusDetail": [
+        {
+            "mainDesc": "Material silika padat yang transparan, kedap, dan steril. Harus dipisahkan mutlak berdasarkan warnanya (Bening/Flint, Hijau/Green, Cokelat/Amber) karena zat pewarna oksida logam pada kaca tidak bisa dicampur saat proses peleburan ulang di pabrik.",
+            "merek": "Botol Sirup Marjan (Bening), Botol Kecap Bango Kaca (Bening/Hijau), Jar Selai Ceres (Bening), Botol UC1000 (Bening), Botol Kratingdaeng (Cokelat), Botol Obat Batuk Woods (Cokelat), Botol Parfum Chanel (Bening), dll.",
+            "potensi": "Kaca baru, bahan abrasif, kerajinan, hingga material bangunan.",
+            "kerjasama": [
+            { "productId": 1 },
+            { "productId": 2 },
+            { "productId": 3 }
+            ]
+        }
+        ]
+    },
+    {
+        "title": "Multi-Material / Kemasan Aseptik",
+        "para": "Rp. 1000/kg",
+        "desc": "Barang : Kotak karton kemasan minuman",
+        "product": [
+        { "id": 1, "img": "../../webp/Product/imageP7.webp" },
+        { "id": 2, "img": "../../webp/Product/imageP1.webp" },
+        { "id": 3, "img": "../../webp/Product/imageP9.webp" },
+        { "id": 4, "img": "../../webp/Product/imageP5.webp" },
+        { "id": 5, "img": "../../webp/Product/imageP12.webp" }
+        ],
+        "kamusDetail": [
+        {
+            "mainDesc": "Kemasan komposit berlapis yang menggabungkan kertas karton (untuk struktur), polietilena plastik (untuk kedap air), dan aluminium foil (untuk pelindung cahaya dan udara). Memerlukan proses urai mesin khusus (hydrapulper) untuk memisahkan serat kertas dari lapisan plastik-aluminiumnya.",
+            "merek": "Ultra Milk, Buavita, Santan Kara Kotak, Teh Kotak, Milo Kotak, Cimory UHT, Hydro Coco, dll.",
+            "potensi": "Papan komposit, kertas daur ulang, atap gelombang ramah lingkungan.",
+            "kerjasama": [
+            { "productId": 4 },
+            { "productId": 5 },
+            { "productId": 6 }
+            ]
+        }
         ]
     }
 ]

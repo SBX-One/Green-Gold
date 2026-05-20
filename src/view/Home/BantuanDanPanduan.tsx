@@ -22,7 +22,7 @@ export default function Bantuan() {
             imageDesk: mapDesk,
             text: "Clean your trash",
             desc: "Plastic, carton, paper, metal, glass... Anything can be scanned and sorted",
-            buttonText: "Set Location"
+            buttonText: "Set Location",
         },
         {
             image : scan,
@@ -30,7 +30,7 @@ export default function Bantuan() {
             text: "Clean your trash",
             onclick: () => navigate('/ScanYourTrash'),
             desc: "If your item is a partnered item and has a barcode, scan it.",
-            buttonText: "Scan Now"
+            buttonText: "Scan Now",
         },
         {
             image : clean,
@@ -58,7 +58,7 @@ export default function Bantuan() {
         </div>
         <div className="hidden lg:flex flex-row justify-center gap-4 px-10 -mt-34 relative z-10">
             {BantuanList.map((item, i) => (
-                <div key={i} className="w-87 border-2 border-border-default flex flex-col gap-8 rounded-3xl bg-white">
+                <div key={i} onClick={item.onclick} className="w-87 border-2 border-border-default flex flex-col gap-8 rounded-3xl bg-white">
                     <img src={item.imageDesk} alt="" className="h-31.5 w-full object-cover rounded-t-3xl" />
                     <div className="p-6 flex flex-col gap-12">
                         <div className="flex flex-col text-center">

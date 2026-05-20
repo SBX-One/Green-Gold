@@ -8,12 +8,26 @@ import setting from "../../assets/svg/settings.svg"
 import RigoButton from "../ui/button/RigoButton";
 
 export default function Menu({ back, mode, onclick, disabledd, btn = true }: MenuProps) {
-    const { totalHarga } = useTrash();
+    const { totalHarga, selectedTrash } = useTrash();
     const navigate = useNavigate();
+    
+    // Determine if the button should be disabled
+    const isButtonDisabled = disabledd !== undefined ? disabledd : selectedTrash.length === 0;
     
     return (
         <div className="flex flex-row justify-between p-5 md:p-10 border-b-2 border-border-default w-screen left-0 relative ml-[calc(50%-50vw)] px-5">
-            <img src={chevron} onClick={() => navigate(back)} alt="back" className="p-3.5 border-2 border-border-default rounded-2xl rotate-90" />
+            <img 
+                src={chevron} 
+                onClick={() => {
+                    if (typeof back === 'number') {
+                        navigate(back);
+                    } else {
+                        navigate(back);
+                    }
+                }} 
+                alt="back" 
+                className="p-3.5 border-2 border-border-default rounded-2xl rotate-90 cursor-pointer" 
+            />
             <div className="flex flex-row gap-3 items-center">
                 {mode === "setting" ? (
                     <SimpleIcon icon={setting} iconWidth={16} />
@@ -26,7 +40,7 @@ export default function Menu({ back, mode, onclick, disabledd, btn = true }: Men
                 )}
                 {btn && (
                     <div className="hidden md:block">
-                        <RigoButton inv={true} text="Lanjut" onClick={onclick} disabled={disabledd} />
+                        <RigoButton inv={true} text="Lanjut" onClick={onclick} disabled={isButtonDisabled} />
                     </div>
                 )}
             </div>

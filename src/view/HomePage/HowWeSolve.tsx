@@ -37,10 +37,10 @@ export default function HowWeSolve() {
     return (
         <div>
             <div className="flex flex-col gap-6 pb-6 border-b border-border-default mt-32">
-                <div className="w-fit mx-auto">
+                <div data-aos="fade-up" data-aos-delay="300" className="w-fit mx-auto">
                     <LogoPill text="How We Solve" />
                 </div>
-                <h1 className="h1-heading text-text-heading text-center">
+                <h1 data-aos="fade-up" data-aos-delay="300" className="h1-heading text-text-heading text-center">
                     Platform Praktis <br className="md:hidden" /> Mengubah <br /> Sampah Rumah  Menjadi Saldo Belanja
                 </h1>
             </div>

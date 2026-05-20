@@ -19,7 +19,7 @@ export default function Balance() {
         {
             text : "Shop",
             icon : shoppingCart,
-            onClick : () => navigate('/ScanYourTrash')
+            onClick : () => navigate('/Shop')
         },
     ]
 

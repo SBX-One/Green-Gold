@@ -1,4 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import HomePages from "./pages/HomePages"
 import Home from "./pages/Home"
 import CleanYourTrash from "./pages/CleanYourTrash";
@@ -17,6 +20,14 @@ import SaldoReceipt from "./view/Saldo/SaldoReceipt";
 import MainShop from "./pages/MainShop";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      offset: 0,
+      once: true
+    });
+  }, []);
+
   return (
     <BrowserRouter>
         <TrashProvider>

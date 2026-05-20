@@ -14,7 +14,7 @@ export default function ProductCard({ img, title, harga }: ProductCardProps) {
             {/* aspect-square untuk rasio seimbang */}
             <div className="bg-surface-default w-full aspect-square flex items-center justify-center rounded-sm border-2 border-border-default mb-3 transition-all duration-200 hover:bg-surface-disabled">
             {/* pakai h-full w-full object-contain supaya gambar mengisi kotaknya */}
-            <img src={src} alt={title} className="h-full w-full object-contain p-3" />
+            <img src={src} alt={title} className="h-full w-full max-h-63.25 object-contain p-3" />
         </div>
 
             <div className="text-left flex flex-col">
