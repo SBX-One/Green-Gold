@@ -58,14 +58,14 @@ export default function Bantuan() {
         </div>
         <div className="hidden lg:flex flex-row justify-center gap-4 px-10 -mt-34 relative z-10">
             {BantuanList.map((item, i) => (
-                <div key={i} onClick={item.onclick} className="w-87 border-2 border-border-default flex flex-col gap-8 rounded-3xl bg-white">
+                <div key={i} className="w-87 border-2 border-border-default flex flex-col gap-8 rounded-3xl bg-white">
                     <img src={item.imageDesk} alt="" className="h-31.5 w-full object-cover rounded-t-3xl" />
                     <div className="p-6 flex flex-col gap-12">
                         <div className="flex flex-col text-center">
                             <h1 className="lg-semibold text-text-body">{item.text}</h1>
                             <p className="sm-semibold text-text-placeholder">{item.desc}</p>
                         </div>
-                        <button className="text-center hover:border-border-action transition-all duration-200 focus:bg-surface-primary focus:outline-0 text-text-action focus:border-0 focus:text-text-on-action bg-neutral-white flex flex-row py-4.5 items-center border-2 border-border-default rounded-2xl gap-2 justify-center">
+                        <button onClick={item.onclick} className="text-center hover:border-border-action transition-all duration-200 focus:bg-surface-primary focus:outline-0 text-text-action focus:border-0 focus:text-text-on-action bg-neutral-white flex flex-row py-4.5 items-center border-2 border-border-default rounded-2xl gap-2 justify-center">
                             <h1 className="md-semibold w-fit font-bold whitespace-nowrap">{item.buttonText}</h1>
                             <ArrowIcon className="w-5 h-5" />
                         </button>

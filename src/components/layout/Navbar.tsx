@@ -28,7 +28,7 @@ export default function Navbar({ mode }: NavbarProps) {
         },
         {
             title: "Shop",
-            links: "/"
+            links: "/Shop"
         }
     ]
 
