@@ -20,15 +20,15 @@ export default function Navbar({ mode }: NavbarProps) {
     const HomeModeList = [
         {
             title: "Home",
-            links: "/Home"
+            links: () => navigate('/Home')
         },
         {
             title: "Kamus",
-            links: "/Kamus"
+            links: () => navigate('/Kamus')
         },
         {
             title: "Shop",
-            links: "/Shop"
+            links: () => navigate('/Shop')
         }
     ]
 
@@ -45,7 +45,7 @@ export default function Navbar({ mode }: NavbarProps) {
                     <img src={isMenuOpen ? chevron : Burger} onClick={() => setIsMenuOpen(!isMenuOpen)} alt="menu" className={`p-3.5 ${mode === 'home' ? 'rounded-2xl' : 'rounded-full'} border-border-default border desktop:hidden ${isMenuOpen ? 'rotate-90' : ''}`} />
                     <div className="desktop:flex hidden gap-4 mr-auto pl-14">
                         {HomeModeList.map((link, index) => (
-                            <a key={index} href={link.links} className="label-default text-foreground py-1.5 px-3">
+                            <a key={index} onClick={link.links} className="label-default text-foreground py-1.5 px-3">
                                 {link.title}
                             </a>
                         ))}
@@ -61,7 +61,7 @@ export default function Navbar({ mode }: NavbarProps) {
                     <div>
                         <div className="border-2 absolute bg-neutral-white rounded-3xl right-0 border-border-default w-2/3 p-5 flex flex-col gap-3">
                             {HomeModeList.map((item, i) => (
-                                <div key={i} onClick={() => navigate(item.links)}>
+                                <div key={i} onClick={item.links}>
                                     <div className="xs-leading-normal text-text-label hover:text-text-action px-5 py-3.5 transition-all duration-100 hover:border-2 border-border-default rounded-2xl">
                                         <h1 className="">{item.title}</h1>
                                     </div>
