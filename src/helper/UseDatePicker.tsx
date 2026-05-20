@@ -6,15 +6,12 @@ export function useDatePicker() {
 
     const openDatePicker = useCallback(() => {
         if (inputRef.current) {
-            // Cara 1: Gunakan showPicker() jika browser support (Chrome, Edge, Opera)
             if ('showPicker' in HTMLInputElement.prototype) {
                 inputRef.current.showPicker();
             } 
-            // Cara 2: Fallback ke .click() untuk browser lain
             else {
                 inputRef.current.click();
             }
-            // Fokus ke input untuk memastikan date picker terbuka
             inputRef.current.focus();
         }
     }, []);
