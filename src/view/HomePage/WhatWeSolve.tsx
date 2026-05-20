@@ -10,27 +10,25 @@ export default function WhatWeSolve() {
     CustomClassFunction({CustomWidth: 768, CustomClass: "leading-normal", divRef:"WWSPara", RemoveCustomClass: "md-default"});
     gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
-    // 1. Buat Ref untuk membungkus elemen yang mau dianimasikan
     const containerRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        // 2. Logika Animasi GSAP ScrollTrigger
         if (containerRef.current) {
             gsap.fromTo(
                 containerRef.current,
                 { 
                     opacity: 0, 
-                    y: 40 // Mulai dari 40px di bawah
+                    y: 40 
                 },
                 {
                     opacity: 1,
-                    y: 0, // Kembali ke posisi asli
+                    y: 0, 
                     duration: 0.8,
                     ease: "power2.out",
                     scrollTrigger: {
-                        trigger: containerRef.current, // Elemen yang memicu animasi
-                        start: "top 85%", // Animasi mulai saat bagian atas elemen menyentuh 85% tinggi layar
-                        toggleActions: "play none none none" // Hanya jalan sekali saat di-scroll turun
+                        trigger: containerRef.current, 
+                        start: "top 85%",
+                        toggleActions: "play none none none" 
                     }
                 }
             );

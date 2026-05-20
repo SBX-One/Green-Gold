@@ -106,7 +106,7 @@ export function TrashProvider({ children }: { children: ReactNode }) {
         setNumSampah([0, 0, 0, 0]);
     };
 
-    // Automatically calculate totalHarga
+
     useEffect(() => {
         const total = selectedTrash.reduce((sum, item) => sum + (item.quantity * item.harga), 0);
         setTotalHarga(total);

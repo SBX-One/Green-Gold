@@ -46,7 +46,6 @@ export default function FAQ() {
                     <RigoAccordian key={index} {...item} />
                 ))}
             </div>
-            {/* <Seperator height={50} /> */}
         </div>
     )
 }

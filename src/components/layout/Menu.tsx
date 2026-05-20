@@ -11,7 +11,6 @@ export default function Menu({ back, mode, onclick, disabledd, btn = true }: Men
     const { totalHarga, selectedTrash } = useTrash();
     const navigate = useNavigate();
     
-    // Determine if the button should be disabled
     const isButtonDisabled = disabledd !== undefined ? disabledd : selectedTrash.length === 0;
     
     return (
