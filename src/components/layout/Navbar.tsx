@@ -20,7 +20,7 @@ export default function Navbar({ mode }: NavbarProps) {
     const HomeModeList = [
         {
             title: "Home",
-            links: "/home"
+            links: "/Home"
         },
         {
             title: "Kamus",
