@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, useEffect } from "react";
+import { createContext, useState, useContext, useEffect, useCallback } from "react";
 // Perbaikan 1: Gunakan import type
 import type { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
@@ -94,17 +94,17 @@ export function TrashProvider({ children }: { children: ReactNode }) {
     const [amount, setAmount] = useState<string>("");
     const navigate = useNavigate();
     
-    const handleCariJemput = () => {
-            setIsOrder(true);
-            navigate('/Home');
-            console.log("back to home")
-        }
+    const handleCariJemput = useCallback(() => {
+        setIsOrder(true);
+        navigate('/Home');
+        console.log("back to home")
+    }, [navigate]);
 
-    const resetTrash = () => {
+    const resetTrash = useCallback(() => {
         setSelectedTrash([]);
         setTotalHarga(0);
         setNumSampah([0, 0, 0, 0]);
-    };
+    }, []);
 
 
     useEffect(() => {
@@ -113,7 +113,7 @@ export function TrashProvider({ children }: { children: ReactNode }) {
     }, [selectedTrash, setTotalHarga]);
 
     // Fungsi untuk manage selectedTrash
-    const addToTrash = (name: string, quantity: number, harga: number) => {
+    const addToTrash = useCallback((name: string, quantity: number, harga: number) => {
         setSelectedTrash(prev => {
             const existing = prev.find(item => item.name === name);
             if (existing) {
@@ -126,19 +126,19 @@ export function TrashProvider({ children }: { children: ReactNode }) {
                 return [...prev, { name, quantity, harga }];
             }
         });
-    };
+    }, []);
 
-    const updateTrashQuantity = (name: string, quantity: number) => {
+    const updateTrashQuantity = useCallback((name: string, quantity: number) => {
         setSelectedTrash(prev => 
             prev.map(item => 
                 item.name === name ? { ...item, quantity } : item
             )
         );
-    };
+    }, []);
 
-    const removeFromTrash = (name: string) => {
+    const removeFromTrash = useCallback((name: string) => {
         setSelectedTrash(prev => prev.filter(item => item.name !== name));
-    };
+    }, []);
 
     return (
         <TrashContext.Provider value={{ amount, setAmount, addToTrash, updateTrashQuantity, removeFromTrash, handleCariJemput, resetTrash, chosenKamus, setChosenKamus, userInput, setUserInput, itemNum, setItemNum, itemVariant, setItemVariant, totalHarga, setTotalHarga, completedHarga, setCompletedHarga, numSampah, setNumSampah, selectedTrash, setSelectedTrash, selectedProduct, setSelectedProduct, title, setTitle, isOrder, setIsOrder, selectedMethod, setSelectedMethod }}>
